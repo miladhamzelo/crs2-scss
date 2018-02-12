@@ -136,13 +136,13 @@ const materialModules = [
   declarations: classesToInclude,
   exports: classesToInclude
 })
-export class SharedModule {
+export class CoreModule {
   /* make sure CoreModule is imported only by one NgModule the AppModule */
   constructor (@Optional()
                @SkipSelf()
-                 parentModule: SharedModule) {
+                 parentModule: CoreModule) {
     if (parentModule) {
-      throw new Error('SharedModule is already loaded. Import only in AppModule');
+      throw new Error('CoreModule is already loaded. Import only in AppModule');
     }
   }
 }

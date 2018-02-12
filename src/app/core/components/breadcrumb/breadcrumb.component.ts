@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
-import { RoutePartsService } from '../../../shared/services/route-parts.service';
-import { LayoutService } from '../../../shared/services/layout.service';
+import { RoutePartsService } from '../..//services/route-parts.service';
+import { LayoutService } from '../..//services/layout.service';
 import { Subscription } from "rxjs/Subscription";
 
 @Component({
@@ -15,7 +15,7 @@ export class BreadcrumbComponent implements OnInit, OnDestroy {
   // public isEnabled: boolean = true;
   constructor(
     private router: Router,
-    private routePartsService: RoutePartsService, 
+    private routePartsService: RoutePartsService,
     private activeRoute: ActivatedRoute,
     public layout: LayoutService
   ) {

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NavigationService } from "../../../shared/services/navigation.service";
-import { LayoutService } from '../../../shared/services/layout.service';
+import { NavigationService } from "../..//services/navigation.service";
+import { LayoutService } from '../..//services/layout.service';
 import PerfectScrollbar from 'perfect-scrollbar';
 
 @Component({

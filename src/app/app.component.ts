@@ -2,8 +2,8 @@ import { Component, OnInit, AfterViewInit, Renderer2 } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router, NavigationEnd, ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 import 'rxjs/add/operator/filter';
-import { RoutePartsService } from './shared/services/route-parts.service';
-import { ThemeService } from './shared/services/theme.service';
+import { RoutePartsService } from './core/services/route-parts.service';
+import { ThemeService } from './core/services/theme.service';
 import {NGXLogger} from 'ngx-logger';
 import {environment} from '@env/environment';
 

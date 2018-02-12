@@ -12,9 +12,9 @@ import { Angulartics2Module } from 'angulartics2';
 import {environment} from '@env/environment';
 
 import { rootRouterConfig } from './app.routing';
-import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
-import {StartupService} from './shared/services/startup.service';
+import {StartupService} from './core/services/startup.service';
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -29,7 +29,7 @@ export function startupServiceFactory(startupService: StartupService): Function 
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
-    SharedModule,
+    CoreModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
