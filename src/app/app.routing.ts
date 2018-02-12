@@ -34,6 +34,11 @@ export const rootRouterConfig: Routes = [
         path: 'dashboard',
         loadChildren: './views/dashboard/dashboard.module#DashboardModule',
         data: { title: 'Dashboard', breadcrumb: 'DASHBOARD', reuse: true}
+      },
+      {
+        path: 'vandashboard',
+        loadChildren: './views/van-dashboard/van-dashboard.module#VanDashboardModule',
+        data: { title: 'Vans Dashboard', breadcrumb: 'Vans Dashboard', preload: true, reuse: true}
       }
     ]
   },

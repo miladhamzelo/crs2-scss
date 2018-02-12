@@ -1,0 +1,52 @@
+.vdashboard-container {
+    background-color: white;
+    border-style: solid;
+    border-width: thin;
+    border-color: lightgrey;
+    min-height: 100%;
+}
+.toolbar-div {
+    background-color: #4054B2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.toolbar-item-div {
+    color: white;
+    font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+    padding: 10px;
+    flex: 0 1 auto;
+}
+.filter-div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+.filter-item-div {
+    margin: 10px;
+    flex: 0 1 auto;
+}
+.bar-chart {
+    display: block;
+    width: 100% !important;
+    margin: 0 auto;
+    max-height: 185px;
+}
+chart {
+    display: block;
+    width: 100% !important;
+    margin: 0 auto;
+    height: auto;
+    max-height: 317px;
+}
+.mat-tab-body-content {
+    overflow: hidden !important;
+}
+
+@media screen and (max-width: 628px) {
+    /* code here only applies to screen devices that have a width lesser than 628*/
+    /* hide van icon */
+    .toolbar-item-div:nth-child(3) {
+        display: none;
+    }
+}
