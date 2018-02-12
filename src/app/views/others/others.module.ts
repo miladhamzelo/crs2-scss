@@ -8,6 +8,7 @@ import { OthersRoutes } from './others.routing';
 import {HighchartsModule} from '../../shared/highcharts/highcharts.module';
 import {AppHighchartsComponent} from './app-highcharts/app-highcharts.component';
 import {MaterialModule} from '../../shared/material/material.module';
+import {AppC3ChartsComponent} from "./app-c3-charts/app-c3-charts.component";
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {MaterialModule} from '../../shared/material/material.module';
   ],
   declarations: [
     AppBlankComponent,
-    AppHighchartsComponent
+    AppHighchartsComponent,
+    AppC3ChartsComponent
   ]
 })
 export class OthersModule { }
