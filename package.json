@@ -1,7 +1,7 @@
 {
-  "name": "egret",
-  "version": "6.0.0",
-  "license": "https://themeforest.net/licenses/terms/regular",
+  "name": "crs2.0",
+  "version": "2.0.0",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +9,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:local": "ng build --aot --build-optimizer --vendor-chunk --extract-css --output-hashing all",
+    "build:test": "ng build --target production --build-optimizer --vendor-chunk --env=test --base-href /crs2/",
+    "build:qa": "ng build --target production --build-optimizer --vendor-chunk --env=qa --base-href /crs2/",
+    "build:prod": "ng build --target production --build-optimizer --vendor-chunk --env=prod --base-href /crs2/"
   },
   "private": true,
   "dependencies": {

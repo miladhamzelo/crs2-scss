@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule, Optional, SkipSelf} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -20,7 +20,8 @@ import {
   MatCheckboxModule,
   MatCardModule,
   MatProgressSpinnerModule,
-  MatRippleModule
+  MatRippleModule, MatExpansionModule, MatInputModule, MatAutocompleteModule, MatTableModule, MatTabsModule, MatChipsModule,
+  MatDialogModule, MatProgressBarModule
 } from '@angular/material';
 
 // ONLY REQUIRED FOR **SIDE** NAVIGATION LAYOUT
@@ -50,12 +51,12 @@ import { DropdownLinkDirective } from './directives/dropdown-link.directive';
 
 // PIPES
 import { RelativeTimePipe } from './pipes/relative-time.pipe';
-import { ExcerptPipe } from "./pipes/excerpt.pipe";
+import { ExcerptPipe } from './pipes/excerpt.pipe';
 
 // SERVICES
 import { ThemeService } from './services/theme.service';
 import { LayoutService } from './services/layout.service';
-import { NavigationService } from "./services/navigation.service";
+import { NavigationService } from './services/navigation.service';
 import { RoutePartsService } from './services/route-parts.service';
 import { AuthGuard } from './services/auth/auth.guard';
 import {StartupService} from './services/startup.service';
@@ -82,6 +83,34 @@ const classesToInclude = [
   ExcerptPipe
 ];
 
+const materialModules = [
+  MatRadioModule,
+  MatCheckboxModule,
+  MatRippleModule,
+  MatToolbarModule,
+  MatCardModule,
+  MatButtonModule,
+  MatTooltipModule,
+  MatExpansionModule,
+  MatIconModule,
+  MatInputModule,
+  MatSelectModule,
+  MatAutocompleteModule,
+  MatTableModule,
+  MatTabsModule,
+  MatMenuModule,
+  MatChipsModule,
+  MatListModule,
+  MatSidenavModule,
+  MatOptionModule,
+  MatSnackBarModule,
+  MatGridListModule,
+  MatDialogModule,
+  MatProgressSpinnerModule,
+  MatProgressBarModule,
+  MatCheckboxModule
+];
+
 @NgModule({
   imports: [
     CommonModule,
@@ -89,22 +118,7 @@ const classesToInclude = [
     RouterModule,
     FlexLayoutModule,
     TranslateModule,
-    MatSidenavModule,
-    MatListModule,
-    MatTooltipModule,
-    MatOptionModule,
-    MatSelectModule,
-    MatMenuModule,
-    MatSnackBarModule,
-    MatGridListModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatRadioModule,
-    MatCheckboxModule,
-    MatCardModule,
-    MatProgressSpinnerModule,
-    MatRippleModule
+    materialModules
   ],
   providers: [
     ThemeService,
@@ -118,4 +132,13 @@ const classesToInclude = [
   declarations: classesToInclude,
   exports: classesToInclude
 })
-export class SharedModule { }
+export class SharedModule {
+  /* make sure CoreModule is imported only by one NgModule the AppModule */
+  constructor (@Optional()
+               @SkipSelf()
+                 parentModule: SharedModule) {
+    if (parentModule) {
+      throw new Error('SharedModule is already loaded. Import only in AppModule');
+    }
+  }
+}
