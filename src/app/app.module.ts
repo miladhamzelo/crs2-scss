@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate/ng2-translate';
 import { GestureConfig } from '@angular/material';
 import { LoggerModule, NGXLogger } from 'ngx-logger';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+import { Angulartics2Module } from 'angulartics2';
 
 import {environment} from '@env/environment';
 
@@ -37,6 +39,8 @@ export function startupServiceFactory(startupService: StartupService): Function 
       serverLogLevel: environment.logLevel,
       level: environment.logLevel
     }),
+    Angulartics2Module.forRoot(
+      [Angulartics2GoogleAnalytics], {}),
     RouterModule.forRoot(rootRouterConfig, { useHash: false })
   ],
   declarations: [AppComponent],
