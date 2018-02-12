@@ -1,0 +1,16 @@
+<div>
+    <mat-card class="p-1">
+        <mat-card-title fxLayoutAlign="start center">
+            <small class="text-muted">{{ title }}</small>
+            <span fxFlex></span>
+            <mat-chip
+                    class="icon-chip"
+                    color="{{ chipColor }}"
+                    selected="true"><mat-icon>{{ chipIcon }}</mat-icon>{{ chipText }}</mat-chip>
+        </mat-card-title>
+        <mat-card-content>
+            <h3 class="m-0 font-normal">{{ valueText }}</h3>
+            <small class="text-muted">{{ subTitle }}</small>
+        </mat-card-content>
+    </mat-card>
+</div>

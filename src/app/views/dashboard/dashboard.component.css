@@ -1,0 +1,50 @@
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+    flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: inherit;
+    align-items: center;
+}
+
+.demo-tab-group {
+    border: 1px solid #e8e8e8;
+}
+
+.mat-expansion-panel-spacing {
+    margin: 0 0 !important;
+}
+
+.dashboard-mat-card-content {
+    height: 220px;
+    overflow-y: auto;
+}
+
+.dashboard-box-border {
+    border: solid;
+    border-color: #3f51b5;
+    border-width: thin;
+    cursor: pointer;
+}
+
+.dashboard-card-button {
+    background:transparent !important;
+    border: hidden !important;
+}
+
+.text-blue {
+    color: rgba(63, 81, 181, 1);
+}
+
+.text-white {
+    color: white;
+}
+
+.text-lightgray {
+    color: rgba(0, 0, 0, .2) !important;
+}
+
+.dashboard-mat-title-lightslategrey {
+    background-color: lightslategrey;
+}

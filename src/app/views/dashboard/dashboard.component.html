@@ -1,0 +1,269 @@
+<div class="animated fadeIn" fxLayout="row" fxLayoutWrap="wrap" [dragula]='"bag-one"'>
+  <app-callout-box-1 fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50"
+                     *ngFor="let calloutonebox of callOutOneBoxes"
+                     [title]="calloutonebox.title"
+                     [subTitle]="calloutonebox.subTitle"
+                     [chipColor]="calloutonebox.chipColor"
+                     [chipIcon]="calloutonebox.chipIcon"
+                     [chipText]="calloutonebox.chipText"
+                     [valueText]="calloutonebox.valueText">
+  </app-callout-box-1>
+</div>
+<section class="home-section" style="padding: 1px">
+    <div class="container animated fadeIn">
+        <div fxLayout="row" fxLayoutWrap="wrap" [dragula]='"bag-two"'>
+            <div fxFlex="100" fxFlex.gt-xs="33.33">
+                <mat-card [ngClass]="box1HighlightClass"
+                          (mouseover)="changeStyle_1($event)" (mouseout)="changeStyle_1($event)"
+                          matTooltip="Click to open Dealer Performance Summary dashboard" [matTooltipPosition]="tooltipPositionAbove"
+                          (click)="dpsOnClick()">
+                    <mat-card-title class="m-0" [style.background-color]="box1Color">
+                        <div class="card-title-text text-center text-white">DPS</div>
+                        <mat-divider></mat-divider>
+                    </mat-card-title>
+                    <mat-card-content class="dashboard-mat-card-content">
+                        <div class="text-center">
+                            <br><br><br>
+                            <button class="card-control dashboard-card-button">
+                                <span class="fa fa-tachometer fa-4x" [ngClass]="icon1ColorClass" style="cursor: pointer"></span>
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div fxFlex="100" fxFlex.gt-xs="33.33">
+                <mat-card [ngClass]="box4HighlightClass"
+                          (mouseover)="changeStyle_4($event)" (mouseout)="changeStyle_4($event)"
+                          (click)="vanDashboardOnClick()">
+                    <mat-card-title class="m-0"  [style.background-color]="box4Color">
+                        <div class="card-title-text text-center text-white">Vans Dashboard</div>
+                        <mat-divider></mat-divider>
+                    </mat-card-title>
+                    <mat-card-content class="dashboard-mat-card-content">
+                        <div class="text-center">
+                            <br><br><br>
+                            <button class="card-control dashboard-card-button">
+                                <span class="fa fa-bus fa-4x" [ngClass]="icon4ColorClass" style="cursor: pointer"></span>
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div fxFlex="100" fxFlex.gt-xs="33.33">
+                <mat-card [ngClass]="box3HighlightClass"
+                          (mouseover)="changeStyle_3($event)" (mouseout)="changeStyle_3($event)"
+                          matTooltip="Click to open Laureate application" [matTooltipPosition]="tooltipPositionAbove"
+                          (click)="laureateOnClick()">
+                    <mat-card-title class="m-0"  [style.background-color]="box3Color">
+                        <div class="card-title-text text-center text-white">Laureate</div>
+                        <mat-divider></mat-divider>
+                    </mat-card-title>
+                    <mat-card-content class="dashboard-mat-card-content">
+                        <div class="text-center">
+                            <br><br><br>
+                            <button class="card-control dashboard-card-button">
+                            <span class="fa fa-trophy fa-4x" [ngClass]="icon3ColorClass" style="cursor: pointer"></span>
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutWrap="wrap">
+            <div fxFlex="100" fxFlex.gt-xs="33.33">
+                <mat-card [ngClass]="box2HighlightClass"
+                          (mouseover)="changeStyle_2($event)" (mouseout)="changeStyle_2($event)"
+                          matTooltip="Click to open Parts Assiatance Center report" [matTooltipPosition]="tooltipPositionAbove"
+                          (click)="pacOnClick()">
+                    <mat-card-title class="m-0" [style.background-color]="box2Color">
+                        <div class="card-title-text text-center text-white">PAC</div>
+                        <mat-divider></mat-divider>
+                    </mat-card-title>
+                    <mat-card-content class="dashboard-mat-card-content">
+                        <div class="text-center">
+                            <br><br><br>
+                            <button class="card-control dashboard-card-button">
+                                <span class="fa fa-wrench fa-4x" [ngClass]="icon2ColorClass" style="cursor: pointer"></span>
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div fxFlex="100" fxFlex.gt-xs="33.33">
+                <mat-card class="p-0" matTooltip="This space is available" [matTooltipPosition]="tooltipPositionBelow">
+                    <mat-card-title class="m-0 dashboard-mat-title-lightslategrey">
+                        <div class="card-title-text text-center text-muted-white" style="color: white">Available</div>
+                        <mat-divider></mat-divider>
+                    </mat-card-title>
+                    <mat-card-content class="dashboard-mat-card-content">
+                        <div class="text-center">
+                            <br><br><br>
+                            <button class="card-control dashboard-card-button">
+                                <span class="fa fa-check-square-o fa-4x text-lightgray"></span>
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+
+            <div fxFlex="100" fxFlex.gt-xs="33.33">
+                <mat-card class="p-0" matTooltip="This space is available" [matTooltipPosition]="tooltipPositionBelow">
+                    <mat-card-title class="m-0 dashboard-mat-title-lightslategrey">
+                        <div class="card-title-text text-center text-muted-white" style="color: white">Available</div>
+                        <mat-divider></mat-divider>
+                    </mat-card-title>
+                    <mat-card-content class="dashboard-mat-card-content">
+                        <div class="text-center">
+                            <br><br><br>
+                            <button class="card-control dashboard-card-button">
+                                <span class="fa fa-check-square-o fa-4x text-lightgray"></span>
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</section>
+<!--<div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex="100" fxFlex.gt-xs="50">
+        <mat-card class="default">
+            <mat-card-title>Dealer Performance Summary</mat-card-title>
+            <mat-card-subtitle>DPS</mat-card-subtitle>
+            <mat-divider></mat-divider>
+            <mat-card-content style="height: 150px; overflow-y: auto; padding: .5rem; !important;">
+                <mat-tab-group>
+                    <mat-tab label="Slide 1">Content for slide 1</mat-tab>
+                    <mat-tab label="Slide 2">Content for slide 2</mat-tab>
+                    <mat-tab label="Slide 3">Content for slide 3</mat-tab>
+                    <mat-tab label="Slide 4">Content for slide 4</mat-tab>
+                </mat-tab-group>
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-actions>
+                &lt;!&ndash;<button
+                        mat-icon-button
+                        [style.overflow]="'visible'"
+                        matTooltip="Previous"
+                        (click)="slickModal2.slickPrev()">
+                    <mat-icon>arrow_back</mat-icon>
+                </button>&ndash;&gt;
+                <span fxFlex=""></span>
+                <button
+                        mat-icon-button
+                        class="text-muted"
+                        [style.overflow]="'visible'"
+                        matTooltip="Open DPS Report"
+                        (click)="dpsOnClick()">
+                    <mat-icon>launch</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div fxFlex="100" fxFlex.gt-xs="50">
+        <mat-card class="default">
+            <mat-card-title>Parts Assistance Center</mat-card-title>
+            <mat-card-subtitle>PAC</mat-card-subtitle>
+            <mat-divider></mat-divider>
+            <mat-card-content style="height: 150px; overflow-y: auto; padding: .5rem; !important;">
+                <mat-tab-group>
+                    <mat-tab label="Slide 1">Content for slide 1</mat-tab>
+                    <mat-tab label="Slide 2">Content for slide 2</mat-tab>
+                    <mat-tab label="Slide 3">Content for slide 3</mat-tab>
+                    <mat-tab label="Slide 4">Content for slide 4</mat-tab>
+                </mat-tab-group>
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-actions>
+                &lt;!&ndash;<button
+                        mat-icon-button
+                        [style.overflow]="'visible'"
+                        matTooltip="Previous"
+                        (click)="slickModal2.slickPrev()">
+                    <mat-icon>arrow_back</mat-icon>
+                </button>&ndash;&gt;
+                <span fxFlex=""></span>
+                <button
+                        mat-icon-button
+                        class="text-muted"
+                        [style.overflow]="'visible'"
+                        matTooltip="Open PAC Report"
+                        (click)="pacOnClick()">
+                    <mat-icon>launch</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+
+<div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex="100">
+        <mat-card class="p-05">
+            <mat-card-title>New Vehicle Sales</mat-card-title>
+            <mat-card-content class="p-0">
+                <mat-accordion>
+                    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <label class="text-muted">PC</label>
+                            </mat-panel-title>
+                            &lt;!&ndash;<mat-panel-description>
+                                <span fxFlex="100"></span>
+                                <i class="fa fa-car fa-fw" aria-hidden="true"></i>
+                            </mat-panel-description>&ndash;&gt;
+                        </mat-expansion-panel-header>
+
+                        <p>Graph or grid here</p>
+
+                        &lt;!&ndash;<mat-action-row>
+                            <button mat-button color="primary" (click)="nextStep()">Next</button>
+                        </mat-action-row>&ndash;&gt;
+                    </mat-expansion-panel>
+
+                    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <label class="text-muted">Vans</label>
+                            </mat-panel-title>
+                           &lt;!&ndash; <mat-panel-description>
+                                <span fxFlex="100"></span>
+                                <i class="fa fa-bus fa-fw" aria-hidden="true"></i>
+                            </mat-panel-description>&ndash;&gt;
+                        </mat-expansion-panel-header>
+
+                        <p>Graph or grid here</p>
+
+                        &lt;!&ndash;<mat-action-row>
+                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                            <button mat-button color="primary" (click)="nextStep()">Next</button>
+                        </mat-action-row>&ndash;&gt;
+                    </mat-expansion-panel>
+
+                    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <label class="text-muted">smart</label>
+                            </mat-panel-title>
+                            &lt;!&ndash;<mat-panel-description>
+                                <span fxFlex="100"></span>
+                                <i class="fa fa-dot-circle-o fa-fw" aria-hidden="true"></i>
+                            </mat-panel-description>&ndash;&gt;
+                        </mat-expansion-panel-header>
+
+                        <p>Graph or grid here</p>
+
+                        &lt;!&ndash;<mat-action-row>
+                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+                            <button mat-button color="primary" (click)="nextStep()">End</button>
+                        </mat-action-row>&ndash;&gt;
+                    </mat-expansion-panel>
+
+                </mat-accordion>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>-->

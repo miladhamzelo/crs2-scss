@@ -16,15 +16,15 @@
 // @import '~quill/dist/quill.core.css';
 // @import '~quill/dist/quill.snow.css';
 // // Drag and Drop
-// @import '~dragula/dist/dragula.css';
+@import '~dragula/dist/dragula.css';
 // // Calendar
 // @import '~angular-calendar/dist/css/angular-calendar.css';
 // // User tour
 // @import '~hopscotch/dist/css/hopscotch.min.css';
 // Page loader Topbar
 @import '../../vendor/pace/pace-theme-min.css';
-
-
+// font awesome icons
+@import '~font-awesome/css/font-awesome.min.css';
 
 // Main Variables File
 @import "scss/variables";
