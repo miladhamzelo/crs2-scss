@@ -29,6 +29,7 @@
     "@angular/platform-browser": "5.2.4",
     "@angular/platform-browser-dynamic": "5.2.4",
     "@angular/router": "5.2.4",
+    "angular2-highcharts": "^0.5.5",
     "angulartics2": "^5.1.0",
     "classlist.js": "1.1.20150312",
     "core-js": "2.4.1",

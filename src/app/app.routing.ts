@@ -25,11 +25,11 @@ export const rootRouterConfig: Routes = [
     component: AdminLayoutComponent,
     canActivate: [AuthGuard],
     children: [
-      /*{
-        path: 'dashboard',
+      {
+        path: 'others',
         loadChildren: './views/others/others.module#OthersModule',
-        data: { title: 'Others', breadcrumb: 'OTHERS'}
-      },*/
+        data: { title: 'Others', breadcrumb: 'OTHERS', preload: false}
+      },
       {
         path: 'dashboard',
         loadChildren: './views/dashboard/dashboard.module#DashboardModule',

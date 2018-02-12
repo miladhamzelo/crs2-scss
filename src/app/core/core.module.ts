@@ -63,6 +63,7 @@ import {StartupService} from './services/startup.service';
 import {GlobalDataService} from './services/globaldata.service';
 import {WindowRef} from './services/window.ref.service';
 import {SelectivePreloadingStrategy} from './services/selective-preloading-strategy';
+import {AppResizeService} from './services/app-resize.service';
 
 const classesToInclude = [
 
@@ -130,6 +131,7 @@ const materialModules = [
     AuthGuard,
     StartupService,
     GlobalDataService,
+    AppResizeService,
     SelectivePreloadingStrategy,
     WindowRef
   ],
