@@ -61,6 +61,8 @@ import { RoutePartsService } from './services/route-parts.service';
 import { AuthGuard } from './services/auth/auth.guard';
 import {StartupService} from './services/startup.service';
 import {GlobalDataService} from './services/globaldata.service';
+import {WindowRef} from './services/window.ref.service';
+import {SelectivePreloadingStrategy} from './services/selective-preloading-strategy';
 
 const classesToInclude = [
 
@@ -127,7 +129,9 @@ const materialModules = [
     RoutePartsService,
     AuthGuard,
     StartupService,
-    GlobalDataService
+    GlobalDataService,
+    SelectivePreloadingStrategy,
+    WindowRef
   ],
   declarations: classesToInclude,
   exports: classesToInclude
