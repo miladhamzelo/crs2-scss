@@ -17,19 +17,19 @@
   -webkit-transition: all $sidebarTrnTime $transitionTiming;
   .app-logo {
     width: auto;
-    height: 22px;
+    height: 30px;
     margin-right: 8px;
   }
   .app-logo-text {
     width: auto;
-    height: 20px;
+    height: 45px;
   }
-} 
+}
 
 .app-user {
   text-align: center;
   width: 100%;
-  padding: 1rem 0 .4rem;
+  padding: 0rem 0 .4rem;
   .app-user-photo {
     width: 72px;
     margin: 0 auto 8px;
@@ -61,5 +61,5 @@
       margin-right: 0;
       margin-left: 8px;
     }
-  } 
+  }
 }
