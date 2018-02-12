@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from "@angular/forms";
-import { RouterModule } from "@angular/router";
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateModule } from 'ng2-translate/ng2-translate';
-import { 
+import {
   MatSidenavModule,
   MatListModule,
   MatTooltipModule,
@@ -34,7 +34,7 @@ import { SidebarTopComponent } from './components/sidebar-top/sidebar-top.compon
 // ONLY FOR DEMO (Removable without changing any layout configuration)
 import { CustomizerComponent } from './components/customizer/customizer.component';
 
-// ALL TIME REQUIRED 
+// ALL TIME REQUIRED
 import { AdminLayoutComponent } from './components/layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './components/layouts/auth-layout/auth-layout.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
@@ -58,9 +58,11 @@ import { LayoutService } from './services/layout.service';
 import { NavigationService } from "./services/navigation.service";
 import { RoutePartsService } from './services/route-parts.service';
 import { AuthGuard } from './services/auth/auth.guard';
+import {StartupService} from './services/startup.service';
+import {GlobalDataService} from './services/globaldata.service';
 
 const classesToInclude = [
-  
+
   HeaderTopComponent,
   SidebarTopComponent,
   SidenavComponent,
@@ -78,7 +80,7 @@ const classesToInclude = [
   DropdownLinkDirective,
   RelativeTimePipe,
   ExcerptPipe
-]
+];
 
 @NgModule({
   imports: [
@@ -109,7 +111,9 @@ const classesToInclude = [
     LayoutService,
     NavigationService,
     RoutePartsService,
-    AuthGuard
+    AuthGuard,
+    StartupService,
+    GlobalDataService
   ],
   declarations: classesToInclude,
   exports: classesToInclude
