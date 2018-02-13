@@ -1,12 +1,6 @@
 // Third party JS imports
 // Page loader
 import './vendor/pace/pace.min.js';
-// // User tour
-// import '../node_modules/hopscotch/dist/js/hopscotch.min.js';
-// // Charts
-// import './vendor/Chart.min.js';
-// // Rich Text Editor
-// import '../node_modules/quill/dist/quill.min.js';
 
 import '../node_modules/hammerjs/hammer.js';
 import { enableProdMode } from '@angular/core';
@@ -19,4 +13,12 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
+  // Ensure Angular destroys itself on hot reloads.
+  if (window['ngRef']) {
+    window['ngRef'].destroy();
+  }
+  window['ngRef'] = ref;
+
+  // Otherise, log the boot error
+}).catch(err => console.error(err));
