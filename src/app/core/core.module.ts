@@ -81,9 +81,7 @@ const classesToInclude = [
   ScrollToDirective,
   AppDropdownDirective,
   DropdownAnchorDirective,
-  DropdownLinkDirective,
-  RelativeTimePipe,
-  ExcerptPipe
+  DropdownLinkDirective
 ];
 
 const materialModules = [

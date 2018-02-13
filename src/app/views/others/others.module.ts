@@ -9,6 +9,8 @@ import {HighchartsModule} from '../../shared/highcharts/highcharts.module';
 import {AppHighchartsComponent} from './app-highcharts/app-highcharts.component';
 import {MaterialModule} from '../../shared/material/material.module';
 import {AppC3ChartsComponent} from "./app-c3-charts/app-c3-charts.component";
+import {AppExternalComponent} from "./app-external/app-external.component";
+import {CommonPipesModule} from "../../core/pipes/common-pipes.module";
 
 @NgModule({
   imports: [
@@ -16,12 +18,14 @@ import {AppC3ChartsComponent} from "./app-c3-charts/app-c3-charts.component";
     FormsModule,
     HighchartsModule,
     MaterialModule,
+    CommonPipesModule,
     RouterModule.forChild(OthersRoutes)
   ],
   declarations: [
     AppBlankComponent,
     AppHighchartsComponent,
-    AppC3ChartsComponent
+    AppC3ChartsComponent,
+    AppExternalComponent
   ]
 })
 export class OthersModule { }
