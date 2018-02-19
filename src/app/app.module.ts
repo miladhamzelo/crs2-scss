@@ -1,5 +1,5 @@
 import {APP_INITIALIZER, NgModule} from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {RouteReuseStrategy, RouterModule} from '@angular/router';
 import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { Http, HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +15,7 @@ import { rootRouterConfig } from './app.routing';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 import {StartupService} from './core/services/startup.service';
+import {CustomReuseStrategy} from "./core/helpers/custom.reuse.strategy";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -53,6 +54,10 @@ export function startupServiceFactory(startupService: StartupService): Function 
       useFactory: startupServiceFactory,
       deps: [StartupService],
       multi: true
+    },
+    {
+      provide: RouteReuseStrategy,
+      useClass: CustomReuseStrategy
     }
   ],
   bootstrap: [AppComponent]
