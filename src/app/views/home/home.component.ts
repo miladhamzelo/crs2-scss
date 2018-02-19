@@ -3,11 +3,11 @@ import {Router} from '@angular/router';
 import {WindowRef} from '../../core/services/window.ref.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-    styleUrls: ['./dashboard.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class HomeComponent implements OnInit {
     @ViewChild('testOutlet', {read: ViewContainerRef}) testOutlet: ViewContainerRef;
     nativeWindow: any;
     box1Color = 'lightslategrey';

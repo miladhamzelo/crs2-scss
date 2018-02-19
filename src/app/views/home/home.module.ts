@@ -2,8 +2,8 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 
-import {DashboardComponent} from './dashboard.component';
-import {DashboardRoutes} from './dashboard.routing';
+import {HomeComponent} from './home.component';
+import {HomeRoutes} from './home.routing';
 import {DragulaModule} from 'ng2-dragula';
 import {CalloutBox1Component} from './callout-box-1/callout-box-1.component';
 import {MaterialModule} from '../../shared/material/material.module';
@@ -13,14 +13,14 @@ import {MaterialModule} from '../../shared/material/material.module';
     CommonModule,
     MaterialModule,
     DragulaModule,
-    RouterModule.forChild(DashboardRoutes)
+    RouterModule.forChild(HomeRoutes)
   ],
   declarations: [
-      DashboardComponent,
+      HomeComponent,
       CalloutBox1Component
   ],
   exports: []
 })
-export class DashboardModule {
+export class HomeModule {
 
 }
