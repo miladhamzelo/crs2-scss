@@ -6,6 +6,7 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ErrorComponent } from './error/error.component';
+import {ComingSoonComponent} from "./coming-soon/coming-soon.component";
 
 export const SessionsRoutes: Routes = [
   {
@@ -34,6 +35,11 @@ export const SessionsRoutes: Routes = [
       path: 'error',
       component: ErrorComponent,
       data: { title: 'Error' }
+    },
+    {
+      path: 'coming-soon',
+      component: ComingSoonComponent,
+      data: { title: 'Coming Soon' }
     }]
   }
 ];

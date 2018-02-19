@@ -14,9 +14,9 @@ export const rootRouterConfig: Routes = [
     component: AuthLayoutComponent,
     children: [
       {
-        path: 'sessions',
+        path: 'app-sessions',
         loadChildren: './views/sessions/sessions.module#SessionsModule',
-        data: { title: 'Session'}
+        data: { title: 'Session', preload: false}
       }
     ]
   },
@@ -38,7 +38,12 @@ export const rootRouterConfig: Routes = [
       {
         path: 'vandashboard',
         loadChildren: './views/van-dashboard/van-dashboard.module#VanDashboardModule',
-        data: { title: 'Vans Dashboard', breadcrumb: 'Vans Dashboard', preload: true, reuse: true}
+        data: { title: 'Vans Dashboard', breadcrumb: 'Vans Dashboard', preload: false, reuse: true}
+      },
+      {
+        path: 'sessions',
+        loadChildren: './views/sessions/sessions.module#SessionsModule',
+        data: { title: 'Session', breadcrumb: 'Sessions', preload: false}
       }
     ]
   },
