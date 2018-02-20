@@ -28,7 +28,7 @@ export class NotificationsComponent implements OnInit {
     time: '12 min ago',
     route: '/charts',
     color: 'warn'
-  }]
+  }];
 
   constructor(private router: Router) {}
 

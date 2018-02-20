@@ -1,11 +1,11 @@
 import { Component, OnInit, AfterViewInit, ViewChild, HostListener } from '@angular/core';
-import { 
-  Router, 
-  NavigationEnd, 
-  RouteConfigLoadStart, 
-  RouteConfigLoadEnd, 
-  ResolveStart, 
-  ResolveEnd 
+import {
+  Router,
+  NavigationEnd,
+  RouteConfigLoadStart,
+  RouteConfigLoadEnd,
+  ResolveStart,
+  ResolveEnd
 } from '@angular/router';
 import { Subscription } from "rxjs/Subscription";
 import { MatSidenav } from '@angular/material';
@@ -46,7 +46,7 @@ export class AdminLayoutComponent implements OnInit, AfterViewInit {
         this.closeSidebar()
       }
     });
-    
+
     // Translator init
     const browserLang: string = translate.getBrowserLang();
     translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
@@ -57,7 +57,7 @@ export class AdminLayoutComponent implements OnInit, AfterViewInit {
     this.layout.publishLayoutChange({
       isMobile: this.isMobile,
       sidebarStyle: this.isMobile ? 'closed' : 'full'
-    })
+    });
     // FOR MODULE LOADER FLAG
     this.moduleLoaderSub = this.router.events.subscribe(event => {
       if(event instanceof RouteConfigLoadStart || event instanceof ResolveStart) {

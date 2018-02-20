@@ -16,7 +16,7 @@ export class HeaderSideComponent implements OnInit {
   }, {
     name: 'Spanish',
     code: 'es',
-  }]
+  }];
   public egretThemes;
   public layoutConf:any;
   constructor(
