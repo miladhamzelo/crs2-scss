@@ -68,7 +68,7 @@
     "tslint": "~5.9.1",
     "typescript": "~2.5.3",
     "@types/c3": "^0.4.54",
-    "@types/hopscotch": "0.2.28",
+    "@types/hopscotch": "0.2.30",
     "enhanced-resolve": "3.3.0"
   }
 }
