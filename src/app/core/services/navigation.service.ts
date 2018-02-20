@@ -48,7 +48,7 @@ export class NavigationService {
     {
       name: 'Favorite 3',
       type: 'icon',
-      tooltip: 'C3 Charts',
+      tooltip: 'Tableau Dashboard',
       icon: 'multiline_chart',
       state: 'others/c3'
     },
