@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as c3 from 'c3';
+// import * as c3 from 'c3';
+declare var tableau: any;
 
 @Component({
   selector: 'app-app-c3-charts',
@@ -8,10 +9,12 @@ import * as c3 from 'c3';
 })
 export class AppC3ChartsComponent implements OnInit {
 
+  tableauViz: any;
+
   constructor() { }
 
   ngOnInit() {
-      let chart = c3.generate({
+      /*let chart = c3.generate({
           bindto: '#chart',
           data: {
               columns: [
@@ -32,7 +35,18 @@ export class AppC3ChartsComponent implements OnInit {
                   ['data1','data2']
               ]
           }
-      });
+      });*/
+    const placeholderDiv = document.getElementById('tableauViz');
+    const url = 'https://public.tableau.com/views/USTreasuryInterestRate/Sheet1?:embed=y&:display_count=yes';
+    const options = {
+      hideTabs: false,
+      width: '100%',
+      height: '100%',
+      onFirstInteractive: function() {
+        // The viz is now ready and can be safely used.
+      }
+    };
+    this.tableauViz = new tableau.Viz(placeholderDiv, url, options);
   }
 
 }
