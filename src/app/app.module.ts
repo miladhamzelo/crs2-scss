@@ -16,8 +16,8 @@ import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 import {StartupService} from './core/services/startup.service';
 import {CustomReuseStrategy} from "./core/helpers/custom.reuse.strategy";
-import {HTTP_INTERCEPTORS} from "@angular/common/http";
-import {ErrorInterceptorService} from "./core/services/error-interceptor.service";
+// import {HTTP_INTERCEPTORS} from "@angular/common/http";
+// import {ErrorInterceptorService} from "./core/services/error-interceptor.service";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');

@@ -4,10 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from "@angular/router";
 
 // import { CommonDirectivesModule } from './sdirectives/common/common-directives.module';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { LockscreenComponent } from './lockscreen/lockscreen.component';
 import { SigninComponent } from './signin/signin.component';
-import { SignupComponent } from './signup/signup.component';
 import { SessionsRoutes } from "./sessions.routing";
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ErrorComponent } from './error/error.component';
@@ -23,10 +20,7 @@ import {MaterialModule} from "../../shared/material/material.module";
     RouterModule.forChild(SessionsRoutes)
   ],
   declarations: [
-    ForgotPasswordComponent,
-    LockscreenComponent,
     SigninComponent,
-    SignupComponent,
     NotFoundComponent,
     ErrorComponent,
     ComingSoonComponent
