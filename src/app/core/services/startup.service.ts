@@ -26,14 +26,14 @@ export class StartupService {
             data => {
                 this.logger.log(data);
                 this.globalDataService.shareObj['userInfoModel'] = data;
-            },
+            }/*,
             (err: HttpErrorResponse) => {
                 if (err.error instanceof Error) {
                     this.logger.error('An error occurred:', err.error.message);
                 } else {
                     this.logger.error(`Backend returned code ${err.status}, body was: ${err.error}`);
                 }
-            }
+            }*/
         );
     }
 }
