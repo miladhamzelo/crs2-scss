@@ -218,7 +218,7 @@ export class VanDashboardComponent implements OnInit {
     getMonthYearArray() {
         let url: string;
         if (this.fetchMockData) {
-            url = 'assets/data/month-year-data.json';
+            url = 'assets/mock-data/month-year-data.json';
         } else {
             url = environment.apiCriteriaService + '/years';
         }
@@ -244,7 +244,7 @@ export class VanDashboardComponent implements OnInit {
     getAllActiveDealers() {
         let url: string;
         if (this.fetchMockData) {
-            url = 'assets/data/active-van-dealers.json';
+            url = 'assets/mock-data/active-van-dealers.json';
         } else {
             url = environment.apiCriteriaService + '/vandealers';
         }
@@ -430,9 +430,9 @@ export class VanDashboardComponent implements OnInit {
         let urlStr: string;
 
         if (this.fetchMockData) {
-            urlStr = 'assets/data/kpi-table-data.json';
+            urlStr = 'assets/mock-data/kpi-table-data.json';
             this.http
-                .get<VanDashboardModel>('assets/data/kpi-table-data.json')
+                .get<VanDashboardModel>(urlStr)
                 .subscribe(
                     data => {
                         this.kpiInfo = data.kpiInfo;
