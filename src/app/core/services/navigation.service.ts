@@ -64,6 +64,14 @@ export class NavigationService {
       state: 'vandashboard'
     },
     {
+      name: 'Tableau',
+      type: 'link',
+      tooltip: 'Tableau Dashboard Integration',
+      icon: 'multiline_chart',
+      state: 'others/c3',
+      badges: [{ color: 'primary', value: 'new' }],
+    },
+    {
       name: 'DPS',
       type: 'extLink',
       tooltip: 'Dealer Performance Summary',
