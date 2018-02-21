@@ -44,7 +44,7 @@ export function startupServiceFactory(startupService: StartupService): Function 
     }),
     Angulartics2Module.forRoot(
       [Angulartics2GoogleAnalytics], {}),
-    RouterModule.forRoot(rootRouterConfig, { useHash: false })
+    RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   declarations: [AppComponent],
   providers: [
