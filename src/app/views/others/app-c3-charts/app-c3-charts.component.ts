@@ -37,11 +37,12 @@ export class AppC3ChartsComponent implements OnInit {
           }
       });*/
     const placeholderDiv = document.getElementById('tableauViz');
-    const url = 'https://public.tableau.com/views/USTreasuryInterestRate/Sheet1?:embed=y&:display_count=yes';
+    const url = 'https://public.tableau.com/views/CMO_1/GlobalOverview?:embed=y&:loadOrderID=0&:display_count=yes';
     const options = {
       hideTabs: false,
       width: '100%',
       height: '100%',
+      toolbar: 'top',
       onFirstInteractive: function() {
         // The viz is now ready and can be safely used.
       }

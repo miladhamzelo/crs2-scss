@@ -49,7 +49,7 @@ export class NavigationService {
       name: 'Favorite 3',
       type: 'icon',
       tooltip: 'Tableau Dashboard',
-      icon: 'multiline_chart',
+      icon: 'photo_filter',
       state: 'others/c3'
     },
     {
@@ -57,19 +57,19 @@ export class NavigationService {
       name: 'Sales'
     },
     {
+      name: 'Self Service',
+      type: 'link',
+      tooltip: 'Self Service',
+      icon: 'photo_filter',
+      state: 'others/c3',
+      badges: [{ color: 'primary', value: 'new' }],
+    },
+    {
       name: 'Vans Dashboard',
       type: 'link',
       tooltip: 'Vans Dashboard',
       icon: 'directions_bus',
       state: 'vandashboard'
-    },
-    {
-      name: 'Tableau',
-      type: 'link',
-      tooltip: 'Tableau Dashboard Integration',
-      icon: 'multiline_chart',
-      state: 'others/c3',
-      badges: [{ color: 'primary', value: 'new' }],
     },
     {
       name: 'DPS',

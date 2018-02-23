@@ -28,6 +28,10 @@ export class HomeComponent implements OnInit {
     box4HighlightClass = 'p-0';
     icon4ColorClass = 'text-gray';
 
+    box5Color = 'lightslategrey';
+    box5HighlightClass = 'p-0';
+    icon5ColorClass = 'text-gray';
+
     sharedChartOptions: any = {
         responsive: true,
         legend: {
@@ -319,6 +323,10 @@ export class HomeComponent implements OnInit {
         this.router.navigateByUrl('vandashboard');
     }
 
+  selfServiceOnClick(): void {
+    this.router.navigateByUrl('others/c3');
+  }
+
     changeStyle_1($event) {
         if ($event.type === 'mouseover') {
             this.box1Color = '#3f51b5';
@@ -366,6 +374,18 @@ export class HomeComponent implements OnInit {
             this.icon4ColorClass = 'text-gray';
         }
     }
+
+  changeStyle_5($event) {
+    if ($event.type === 'mouseover') {
+      this.box5Color = '#3f51b5';
+      this.box5HighlightClass = 'p-0 dashboard-box-border';
+      this.icon5ColorClass = 'text-blue';
+    } else {
+      this.box5Color = 'lightslategrey';
+      this.box5HighlightClass = 'p-0';
+      this.icon5ColorClass = 'text-gray';
+    }
+  }
 
     /*loadComponent() {
         this.dynamicComponentLoader
