@@ -50,7 +50,7 @@ export class NavigationService {
       type: 'icon',
       tooltip: 'Tableau Dashboard',
       icon: 'photo_filter',
-      state: 'others/c3'
+      state: 'others/tableau'
     },
     {
       type: 'separator',

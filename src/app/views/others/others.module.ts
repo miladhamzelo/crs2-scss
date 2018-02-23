@@ -11,6 +11,7 @@ import {MaterialModule} from '../../shared/material/material.module';
 import {AppC3ChartsComponent} from "./app-c3-charts/app-c3-charts.component";
 import {AppExternalComponent} from "./app-external/app-external.component";
 import {CommonPipesModule} from "../../core/pipes/common-pipes.module";
+import { AppTableauDemoComponent } from './app-tableau-demo/app-tableau-demo.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import {CommonPipesModule} from "../../core/pipes/common-pipes.module";
     AppBlankComponent,
     AppHighchartsComponent,
     AppC3ChartsComponent,
-    AppExternalComponent
+    AppExternalComponent,
+    AppTableauDemoComponent
   ]
 })
 export class OthersModule { }
