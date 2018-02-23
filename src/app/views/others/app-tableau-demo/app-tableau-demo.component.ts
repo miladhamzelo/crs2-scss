@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
-import {MatTabChangeEvent} from "@angular/material";
+import {MatTabChangeEvent} from '@angular/material';
 
 declare var tableau: any;
 
@@ -19,7 +19,7 @@ export class AppTableauDemoComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.tableauViz1Url = 'https://public.tableau.com/views/Moneywellspent/Dashboard1?:embed=y&:display_count=yes';
-    this.tableauViz2Url = 'https://public.tableau.com/views/tdf/Dashboard1?:embed=y&:display_count=yes';
+    this.tableauViz2Url = 'https://public.tableau.com/views/AtlanticHurricanes1950-2014/AtlanticHurricanes1950-2014?:embed=y&:loadOrderID=0&:display_count=yes';
   }
 
   ngAfterViewInit(): void {
@@ -35,13 +35,13 @@ export class AppTableauDemoComponent implements OnInit, AfterViewInit {
     let url = '';
     const options = {
       hideTabs: true,
-      width: (window.innerWidth - (window.innerWidth*.10)),
-      height: (window.innerHeight - (window.innerHeight *.10)),
+      width: (window.innerWidth - (window.innerWidth * .10)),
+      height: (window.innerHeight - (window.innerHeight * .10)),
       onFirstInteractive: function() {
         // The viz is now ready and can be safely used.
       }
     };
-    if(index === 0) {
+    if (index === 0) {
       url = this.tableauViz1Url;
       placeholderDiv = document.getElementById('tableauViz1');
       this.tableauViz1 = new tableau.Viz(placeholderDiv, url, options);
