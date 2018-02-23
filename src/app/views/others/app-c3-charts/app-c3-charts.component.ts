@@ -5,7 +5,7 @@ declare var tableau: any;
 @Component({
   selector: 'app-app-c3-charts',
   templateUrl: './app-c3-charts.component.html',
-  styleUrls: ['./app-c3-charts.component.css']
+  styleUrls: ['./app-c3-charts.component.scss']
 })
 export class AppC3ChartsComponent implements OnInit {
 

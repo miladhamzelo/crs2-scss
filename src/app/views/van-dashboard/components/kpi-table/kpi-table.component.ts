@@ -5,7 +5,7 @@ import {NGXLogger} from 'ngx-logger';
 @Component({
   selector: 'app-kpi-table',
   templateUrl: './kpi-table.component.html',
-  styleUrls: ['./kpi-table.component.css'],
+  styleUrls: ['./kpi-table.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
 export class KpiTableComponent implements OnInit {

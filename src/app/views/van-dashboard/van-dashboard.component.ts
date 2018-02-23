@@ -23,7 +23,7 @@ const Highcharts = require('highcharts');
 @Component({
     selector: 'app-van-dashboard',
     templateUrl: './van-dashboard.component.html',
-    styleUrls: ['./van-dashboard.component.css'],
+    styleUrls: ['./van-dashboard.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
 export class VanDashboardComponent implements OnInit {

@@ -3,7 +3,7 @@ import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 @Component({
   selector: 'app-app-external',
   templateUrl: './app-external.component.html',
-  styleUrls: ['./app-external.component.css']
+  styleUrls: ['./app-external.component.scss']
 })
 export class AppExternalComponent implements OnInit {
 

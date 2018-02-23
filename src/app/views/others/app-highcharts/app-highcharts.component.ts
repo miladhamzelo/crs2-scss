@@ -7,7 +7,7 @@ const Highcharts = require('highcharts');
 @Component({
   selector: 'app-app-highcharts',
   templateUrl: './app-highcharts.component.html',
-  styleUrls: ['./app-highcharts.component.css']
+  styleUrls: ['./app-highcharts.component.scss']
 })
 export class AppHighchartsComponent implements OnInit, AfterViewInit {
 
