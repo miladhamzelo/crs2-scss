@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable()
 export class WindowRef {
-  constructor() {}
+	constructor() {}
 
-  getNativeWindow() {
-    return window;
-  }
+	getNativeWindow() {
+		return window;
+	}
 }

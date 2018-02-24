@@ -1,4 +1,4 @@
 export interface Entitlement {
-    functionName: string;
-    accessRight: string;
+	functionName: string;
+	accessRight: string;
 }

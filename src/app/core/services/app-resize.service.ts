@@ -1,15 +1,14 @@
-
-import {EventEmitter, Injectable} from '@angular/core';
+import { EventEmitter, Injectable } from "@angular/core";
 
 @Injectable()
 export class AppResizeService {
-    public appResized$: EventEmitter<boolean>;
+	public appResized$: EventEmitter<boolean>;
 
-    constructor() {
-        this.appResized$ = new EventEmitter();
-    }
+	constructor() {
+		this.appResized$ = new EventEmitter();
+	}
 
-    public appResized(): void {
-        this.appResized$.emit(true);
-    }
+	public appResized(): void {
+		this.appResized$.emit(true);
+	}
 }
