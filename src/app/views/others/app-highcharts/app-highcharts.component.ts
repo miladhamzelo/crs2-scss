@@ -1,13 +1,13 @@
-import { AfterViewInit, Component, OnInit } from "@angular/core";
-import { NGXLogger } from "ngx-logger";
-import { AppResizeService } from "../../../core/services/app-resize.service";
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { NGXLogger } from 'ngx-logger';
+import { AppResizeService } from '../../../core/services/app-resize.service';
 declare var require: any;
-const Highcharts = require("highcharts");
+const Highcharts = require('highcharts');
 
 @Component({
-	selector: "app-app-highcharts",
-	templateUrl: "./app-highcharts.component.html",
-	styleUrls: ["./app-highcharts.component.scss"]
+	selector: 'app-app-highcharts',
+	templateUrl: './app-highcharts.component.html',
+	styleUrls: ['./app-highcharts.component.scss']
 })
 export class AppHighchartsComponent implements OnInit, AfterViewInit {
 	resChartOptions: Object;
@@ -32,25 +32,25 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 
 		this.resChartOptions = {
 			chart: {
-				type: "column"
+				type: 'column'
 			},
 
 			title: {
-				text: "Highcharts Responsive Chart"
+				text: 'Highcharts Responsive Chart'
 			},
 
 			subtitle: {
-				text: "Resize the frame to change appearance"
+				text: 'Resize the frame to change appearance'
 			},
 
 			legend: {
-				align: "right",
-				verticalAlign: "middle",
-				layout: "vertical"
+				align: 'right',
+				verticalAlign: 'middle',
+				layout: 'vertical'
 			},
 
 			xAxis: {
-				categories: ["Apples", "Oranges", "Bananas"],
+				categories: ['Apples', 'Oranges', 'Bananas'],
 				labels: {
 					x: -10
 				}
@@ -59,21 +59,21 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 			yAxis: {
 				allowDecimals: false,
 				title: {
-					text: "Amount"
+					text: 'Amount'
 				}
 			},
 
 			series: [
 				{
-					name: "Christmas Eve",
+					name: 'Christmas Eve',
 					data: [1, 4, 3]
 				},
 				{
-					name: "Christmas Day before dinner",
+					name: 'Christmas Day before dinner',
 					data: [6, 4, 2]
 				},
 				{
-					name: "Christmas Day after dinner",
+					name: 'Christmas Day after dinner',
 					data: [8, 4, 3]
 				}
 			],
@@ -86,13 +86,13 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 						},
 						chartOptions: {
 							legend: {
-								align: "center",
-								verticalAlign: "bottom",
-								layout: "horizontal"
+								align: 'center',
+								verticalAlign: 'bottom',
+								layout: 'horizontal'
 							},
 							yAxis: {
 								labels: {
-									align: "left",
+									align: 'left',
 									x: 0,
 									y: -5
 								},
@@ -114,50 +114,50 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 
 		this.bubbleChartOptions = {
 			chart: {
-				type: "areaspline"
+				type: 'areaspline'
 			},
 			title: {
-				text: "Average fruit consumption during one week"
+				text: 'Average fruit consumption during one week'
 			},
 			legend: {
-				layout: "vertical",
-				align: "left",
-				verticalAlign: "top",
+				layout: 'vertical',
+				align: 'left',
+				verticalAlign: 'top',
 				x: 150,
 				y: 100,
 				floating: true,
 				borderWidth: 1,
 				backgroundColor:
 					(Highcharts.theme && Highcharts.theme.legendBackgroundColor) ||
-					"#FFFFFF"
+					'#FFFFFF'
 			},
 			xAxis: {
 				categories: [
-					"Monday",
-					"Tuesday",
-					"Wednesday",
-					"Thursday",
-					"Friday",
-					"Saturday",
-					"Sunday"
+					'Monday',
+					'Tuesday',
+					'Wednesday',
+					'Thursday',
+					'Friday',
+					'Saturday',
+					'Sunday'
 				],
 				plotBands: [
 					{
 						// visualize the weekend
 						from: 4.5,
 						to: 6.5,
-						color: "rgba(68, 170, 213, .2)"
+						color: 'rgba(68, 170, 213, .2)'
 					}
 				]
 			},
 			yAxis: {
 				title: {
-					text: "Fruit units"
+					text: 'Fruit units'
 				}
 			},
 			tooltip: {
 				shared: true,
-				valueSuffix: " units"
+				valueSuffix: ' units'
 			},
 			credits: {
 				enabled: false
@@ -169,11 +169,11 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 			},
 			series: [
 				{
-					name: "John",
+					name: 'John',
 					data: [3, 4, 3, 5, 4, 10, 12]
 				},
 				{
-					name: "Jane",
+					name: 'Jane',
 					data: [1, 3, 4, 3, 3, 5, 4]
 				}
 			]
@@ -181,7 +181,7 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 
 		this.threeDimOptions = {
 			chart: {
-				type: "pie",
+				type: 'pie',
 				options3d: {
 					enabled: true,
 					alpha: 45,
@@ -189,10 +189,10 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 				}
 			},
 			title: {
-				text: "Browser market shares at a specific website, 2014"
+				text: 'Browser market shares at a specific website, 2014'
 			},
 			tooltip: {
-				pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>"
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
 			},
 			exporting: {
 				enabled: false
@@ -200,30 +200,30 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 			plotOptions: {
 				pie: {
 					allowPointSelect: true,
-					cursor: "pointer",
+					cursor: 'pointer',
 					depth: 35,
 					dataLabels: {
 						enabled: true,
-						format: "{point.name}"
+						format: '{point.name}'
 					}
 				}
 			},
 			series: [
 				{
-					type: "pie",
-					name: "Browser share",
+					type: 'pie',
+					name: 'Browser share',
 					data: [
-						["Firefox", 45.0],
-						["IE", 26.8],
+						['Firefox', 45.0],
+						['IE', 26.8],
 						{
-							name: "Chrome",
+							name: 'Chrome',
 							y: 12.8,
 							sliced: true,
 							selected: true
 						},
-						["Safari", 8.5],
-						["Opera", 6.2],
-						["Others", 0.7]
+						['Safari', 8.5],
+						['Opera', 6.2],
+						['Others', 0.7]
 					]
 				}
 			]
@@ -232,33 +232,33 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 		this.cmbChartOptions = {
 			plotOptions: {
 				column: {
-					stacking: "normal"
+					stacking: 'normal'
 				}
 			},
 			chart: {
-				zoomType: "xy"
+				zoomType: 'xy'
 			},
 			title: {
-				text: "Average Monthly Weather Data for Tokyo"
+				text: 'Average Monthly Weather Data for Tokyo'
 			},
 			subtitle: {
-				text: "Source: WorldClimate.com"
+				text: 'Source: WorldClimate.com'
 			},
 			xAxis: [
 				{
 					categories: [
-						"Jan",
-						"Feb",
-						"Mar",
-						"Apr",
-						"May",
-						"Jun",
-						"Jul",
-						"Aug",
-						"Sep",
-						"Oct",
-						"Nov",
-						"Dec"
+						'Jan',
+						'Feb',
+						'Mar',
+						'Apr',
+						'May',
+						'Jun',
+						'Jul',
+						'Aug',
+						'Sep',
+						'Oct',
+						'Nov',
+						'Dec'
 					]
 				}
 			],
@@ -267,16 +267,16 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 					// Primary yAxis
 					labels: {
 						formatter: function() {
-							return this.value + "°C";
+							return this.value + '°C';
 						},
 						style: {
-							color: "#89A54E"
+							color: '#89A54E'
 						}
 					},
 					title: {
-						text: "Temperature",
+						text: 'Temperature',
 						style: {
-							color: "#89A54E"
+							color: '#89A54E'
 						}
 					},
 					opposite: true
@@ -285,17 +285,17 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 					// Secondary yAxis
 					gridLineWidth: 0,
 					title: {
-						text: "Rainfall",
+						text: 'Rainfall',
 						style: {
-							color: "#4572A7"
+							color: '#4572A7'
 						}
 					},
 					labels: {
 						formatter: function() {
-							return this.value + " mm";
+							return this.value + ' mm';
 						},
 						style: {
-							color: "#4572A7"
+							color: '#4572A7'
 						}
 					}
 				},
@@ -303,17 +303,17 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 					// Tertiary yAxis
 					gridLineWidth: 0,
 					title: {
-						text: "Sea-Level Pressure",
+						text: 'Sea-Level Pressure',
 						style: {
-							color: "#AA4643"
+							color: '#AA4643'
 						}
 					},
 					labels: {
 						formatter: function() {
-							return this.value + " mb";
+							return this.value + ' mb';
 						},
 						style: {
-							color: "#AA4643"
+							color: '#AA4643'
 						}
 					},
 					opposite: true
@@ -323,19 +323,19 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 				shared: true
 			},
 			legend: {
-				layout: "vertical",
-				align: "left",
+				layout: 'vertical',
+				align: 'left',
 				x: 120,
-				verticalAlign: "top",
+				verticalAlign: 'top',
 				y: 80,
 				floating: true,
-				backgroundColor: "#FFFFFF"
+				backgroundColor: '#FFFFFF'
 			},
 			series: [
 				{
-					name: "Rainfall",
-					color: "#4572A7",
-					type: "column",
+					name: 'Rainfall',
+					color: '#4572A7',
+					type: 'column',
 					yAxis: 1,
 					data: [
 						49.9,
@@ -352,13 +352,13 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 						54.4
 					],
 					tooltip: {
-						valueSuffix: " mm"
+						valueSuffix: ' mm'
 					}
 				},
 				{
-					name: "Frogs",
-					color: "#257766",
-					type: "column",
+					name: 'Frogs',
+					color: '#257766',
+					type: 'column',
 					yAxis: 1,
 					data: [
 						59.9,
@@ -375,13 +375,13 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 						54.4
 					],
 					tooltip: {
-						valueSuffix: " mm"
+						valueSuffix: ' mm'
 					}
 				},
 				{
-					name: "Sea-Level Pressure",
-					type: "spline",
-					color: "#AA4643",
+					name: 'Sea-Level Pressure',
+					type: 'spline',
+					color: '#AA4643',
 					yAxis: 2,
 					data: [
 						1016,
@@ -400,15 +400,15 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 					marker: {
 						enabled: false
 					},
-					dashStyle: "shortdot",
+					dashStyle: 'shortdot',
 					tooltip: {
-						valueSuffix: " mb"
+						valueSuffix: ' mb'
 					}
 				},
 				{
-					name: "Temperature",
-					color: "#89A54E",
-					type: "spline",
+					name: 'Temperature',
+					color: '#89A54E',
+					type: 'spline',
 					data: [
 						7.0,
 						6.9,
@@ -424,7 +424,7 @@ export class AppHighchartsComponent implements OnInit, AfterViewInit {
 						9.6
 					],
 					tooltip: {
-						valueSuffix: " °C"
+						valueSuffix: ' °C'
 					}
 				}
 			]

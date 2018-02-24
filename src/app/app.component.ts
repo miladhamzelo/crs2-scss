@@ -1,27 +1,27 @@
-import { Component, OnInit, AfterViewInit, Renderer2 } from "@angular/core";
-import { Title } from "@angular/platform-browser";
+import { Component, OnInit, AfterViewInit, Renderer2 } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import {
 	Router,
 	NavigationEnd,
 	ActivatedRoute,
 	ActivatedRouteSnapshot
-} from "@angular/router";
-import "rxjs/add/operator/filter";
-import { RoutePartsService } from "./core/services/route-parts.service";
-import { ThemeService } from "./core/services/theme.service";
-import { NGXLogger } from "ngx-logger";
-import { environment } from "@env/environment";
+} from '@angular/router';
+import 'rxjs/add/operator/filter';
+import { RoutePartsService } from './core/services/route-parts.service';
+import { ThemeService } from './core/services/theme.service';
+import { NGXLogger } from 'ngx-logger';
+import { environment } from '@env/environment';
 
 declare const ga: Function;
 
 @Component({
-	selector: "app-root",
-	templateUrl: "./app.component.html",
-	styleUrls: ["./app.component.scss"]
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, AfterViewInit {
-	appTitle = "CRS 2.0";
-	pageTitle = "";
+	appTitle = 'CRS 2.0';
+	pageTitle = '';
 
 	constructor(
 		public title: Title,
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 		private _logger: NGXLogger
 	) {
 		ga(
-			"create",
+			'create',
 			environment.googleAnalyticsUID,
 			environment.googleAnalyticsMode
 		);

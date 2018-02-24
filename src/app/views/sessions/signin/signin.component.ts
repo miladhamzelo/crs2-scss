@@ -1,11 +1,11 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { MatProgressBar, MatButton } from "@angular/material";
-import { Validators, FormGroup, FormControl } from "@angular/forms";
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatProgressBar, MatButton } from '@angular/material';
+import { Validators, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
-	selector: "app-signin",
-	templateUrl: "./signin.component.html",
-	styleUrls: ["./signin.component.scss"]
+	selector: 'app-signin',
+	templateUrl: './signin.component.html',
+	styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
 	@ViewChild(MatProgressBar) progressBar: MatProgressBar;
@@ -17,8 +17,8 @@ export class SigninComponent implements OnInit {
 
 	ngOnInit() {
 		this.signinForm = new FormGroup({
-			username: new FormControl("", Validators.required),
-			password: new FormControl("", Validators.required),
+			username: new FormControl('', Validators.required),
+			password: new FormControl('', Validators.required),
 			rememberMe: new FormControl(false)
 		});
 	}
@@ -28,6 +28,6 @@ export class SigninComponent implements OnInit {
 		console.log(signinData);
 
 		// this.submitButton.disabled = true;
-		this.progressBar.mode = "indeterminate";
+		this.progressBar.mode = 'indeterminate';
 	}
 }

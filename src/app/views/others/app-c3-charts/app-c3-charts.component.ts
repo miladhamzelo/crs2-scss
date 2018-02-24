@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 // import * as c3 from 'c3';
 declare var tableau: any;
 
 @Component({
-	selector: "app-app-c3-charts",
-	templateUrl: "./app-c3-charts.component.html",
-	styleUrls: ["./app-c3-charts.component.scss"]
+	selector: 'app-app-c3-charts',
+	templateUrl: './app-c3-charts.component.html',
+	styleUrls: ['./app-c3-charts.component.scss']
 })
 export class AppC3ChartsComponent implements OnInit {
 	tableauViz: any;
@@ -35,14 +35,14 @@ export class AppC3ChartsComponent implements OnInit {
               ]
           }
       });*/
-		const placeholderDiv = document.getElementById("tableauViz");
+		const placeholderDiv = document.getElementById('tableauViz');
 		const url =
-			"https://public.tableau.com/views/CMO_1/GlobalOverview?:embed=y&:loadOrderID=0&:display_count=yes";
+			'https://public.tableau.com/views/CMO_1/GlobalOverview?:embed=y&:loadOrderID=0&:display_count=yes';
 		const options = {
 			hideTabs: false,
-			width: "100%",
-			height: "100%",
-			toolbar: "top",
+			width: '100%',
+			height: '100%',
+			toolbar: 'top',
 			onFirstInteractive: function() {
 				// The viz is now ready and can be safely used.
 			}

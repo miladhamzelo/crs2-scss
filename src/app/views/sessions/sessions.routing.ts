@@ -1,33 +1,33 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-import { SigninComponent } from "./signin/signin.component";
-import { NotFoundComponent } from "./not-found/not-found.component";
-import { ErrorComponent } from "./error/error.component";
-import { ComingSoonComponent } from "./coming-soon/coming-soon.component";
+import { SigninComponent } from './signin/signin.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ErrorComponent } from './error/error.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 export const SessionsRoutes: Routes = [
 	{
-		path: "",
+		path: '',
 		children: [
 			{
-				path: "signin",
+				path: 'signin',
 				component: SigninComponent,
-				data: { title: "Signin" }
+				data: { title: 'Signin' }
 			},
 			{
-				path: "404",
+				path: '404',
 				component: NotFoundComponent,
-				data: { title: "Not Found" }
+				data: { title: 'Not Found' }
 			},
 			{
-				path: "error",
+				path: 'error',
 				component: ErrorComponent,
-				data: { title: "Error" }
+				data: { title: 'Error' }
 			},
 			{
-				path: "coming-soon",
+				path: 'coming-soon',
 				component: ComingSoonComponent,
-				data: { title: "Coming Soon" }
+				data: { title: 'Coming Soon' }
 			}
 		]
 	}

@@ -1,17 +1,17 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from "@angular/core";
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-	selector: "app-app-external",
-	templateUrl: "./app-external.component.html",
-	styleUrls: ["./app-external.component.scss"]
+	selector: 'app-app-external',
+	templateUrl: './app-external.component.html',
+	styleUrls: ['./app-external.component.scss']
 })
 export class AppExternalComponent implements OnInit {
-	@ViewChild("iframe") iframe: ElementRef;
+	@ViewChild('iframe') iframe: ElementRef;
 	@Input() sourceURL: string;
 
 	constructor() {}
 
 	ngOnInit() {
-		this.sourceURL = "https://www.youtube.com/embed/LiJcw-iAGKQ";
+		this.sourceURL = 'https://www.youtube.com/embed/LiJcw-iAGKQ';
 	}
 }

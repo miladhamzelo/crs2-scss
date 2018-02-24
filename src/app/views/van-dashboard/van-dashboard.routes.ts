@@ -1,10 +1,10 @@
-import { Routes } from "@angular/router";
-import { VanDashboardComponent } from "./van-dashboard.component";
+import { Routes } from '@angular/router';
+import { VanDashboardComponent } from './van-dashboard.component';
 
 export const VanDashboardRoutes: Routes = [
 	{
-		path: "",
+		path: '',
 		component: VanDashboardComponent,
-		data: { title: "Vans Dashboard" }
+		data: { title: 'Vans Dashboard' }
 	}
 ];

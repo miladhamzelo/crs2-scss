@@ -1,5 +1,5 @@
-import { UserProfile } from "./user.profile.model";
-import { Response } from "./Response";
+import { UserProfile } from './user.profile.model';
+import { Response } from './Response';
 
 export interface UserInfoModel {
 	loggedInUserId: string;

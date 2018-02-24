@@ -2,7 +2,7 @@ import {
 	ActivatedRouteSnapshot,
 	DetachedRouteHandle,
 	RouteReuseStrategy
-} from "@angular/router";
+} from '@angular/router';
 
 export class CustomReuseStrategy implements RouteReuseStrategy {
 	handlers: { [key: string]: DetachedRouteHandle } = {};
@@ -51,9 +51,9 @@ export class CustomReuseStrategy implements RouteReuseStrategy {
 		// console.log(route);
 		let key: string;
 		if (route.data) {
-			key = route.data["title"];
+			key = route.data['title'];
 		} else if (route.firstChild.data) {
-			key = route.firstChild.data["title"];
+			key = route.firstChild.data['title'];
 		}
 		return key;
 	}
