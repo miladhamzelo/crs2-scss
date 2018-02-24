@@ -1,38 +1,47 @@
-import { Component, OnInit, AfterViewInit, Renderer2 } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { Router, NavigationEnd, ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
-import 'rxjs/add/operator/filter';
-import { RoutePartsService } from './core/services/route-parts.service';
-import { ThemeService } from './core/services/theme.service';
-import {NGXLogger} from 'ngx-logger';
-import {environment} from '@env/environment';
+import { Component, OnInit, AfterViewInit, Renderer2 } from "@angular/core";
+import { Title } from "@angular/platform-browser";
+import {
+	Router,
+	NavigationEnd,
+	ActivatedRoute,
+	ActivatedRouteSnapshot
+} from "@angular/router";
+import "rxjs/add/operator/filter";
+import { RoutePartsService } from "./core/services/route-parts.service";
+import { ThemeService } from "./core/services/theme.service";
+import { NGXLogger } from "ngx-logger";
+import { environment } from "@env/environment";
 
 declare const ga: Function;
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: "app-root",
+	templateUrl: "./app.component.html",
+	styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  appTitle = 'CRS 2.0';
-  pageTitle = '';
+	appTitle = "CRS 2.0";
+	pageTitle = "";
 
-  constructor(
-    public title: Title,
-    private router: Router,
-    private activeRoute: ActivatedRoute,
-    private routePartsService: RoutePartsService,
-    private themeService: ThemeService,
-    private renderer: Renderer2,
-    private _logger: NGXLogger
-  ) {
-    ga('create', environment.googleAnalyticsUID, environment.googleAnalyticsMode);
-  }
+	constructor(
+		public title: Title,
+		private router: Router,
+		private activeRoute: ActivatedRoute,
+		private routePartsService: RoutePartsService,
+		private themeService: ThemeService,
+		private renderer: Renderer2,
+		private _logger: NGXLogger
+	) {
+		ga(
+			"create",
+			environment.googleAnalyticsUID,
+			environment.googleAnalyticsMode
+		);
+	}
 
-  ngOnInit() {
-    // if EAI service is down/not reachable
-    /*if (this._globalDataService.shareObj['userInfoModel'] === undefined) {
+	ngOnInit() {
+		// if EAI service is down/not reachable
+		/*if (this._globalDataService.shareObj['userInfoModel'] === undefined) {
         this._logger.error('Looks like the EAI service is down...redirecting to fatal error page...');
         this.router.navigate(['/app-sessions/error/'],
             {
@@ -82,27 +91,33 @@ export class AppComponent implements OnInit, AfterViewInit {
             );
         }
     }*/
-    this.changePageTitle();
-  }
+		this.changePageTitle();
+	}
 
-  ngAfterViewInit() {
-    this.themeService.applyMatTheme(this.renderer);
-  }
+	ngAfterViewInit() {
+		this.themeService.applyMatTheme(this.renderer);
+	}
 
-  changePageTitle() {
-    this.router.events.filter(event => event instanceof NavigationEnd).subscribe((routeChange) => {
-      const routeParts = this.routePartsService.generateRouteParts(this.activeRoute.snapshot);
-      if (!routeParts.length) {
-        return this.title.setTitle(this.appTitle);
-      }
+	changePageTitle() {
+		this.router.events
+			.filter(event => event instanceof NavigationEnd)
+			.subscribe(routeChange => {
+				const routeParts = this.routePartsService.generateRouteParts(
+					this.activeRoute.snapshot
+				);
+				if (!routeParts.length) {
+					return this.title.setTitle(this.appTitle);
+				}
 
-      // Extract title from parts;
-      this.pageTitle = routeParts
-                      .reverse()
-                      .map((part) => part.title )
-                      .reduce((partA, partI) => {return `${partA} > ${partI}`; });
-      this.pageTitle += ` | ${this.appTitle}`;
-      this.title.setTitle(this.pageTitle);
-    });
-  }
+				// Extract title from parts;
+				this.pageTitle = routeParts
+					.reverse()
+					.map(part => part.title)
+					.reduce((partA, partI) => {
+						return `${partA} > ${partI}`;
+					});
+				this.pageTitle += ` | ${this.appTitle}`;
+				this.title.setTitle(this.pageTitle);
+			});
+	}
 }
