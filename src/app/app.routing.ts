@@ -28,12 +28,23 @@ export const rootRouterConfig: Routes = [
 			{
 				path: 'others',
 				loadChildren: './feature/+others/others.module#OthersModule',
-				data: { title: 'Others', breadcrumb: 'OTHERS', preload: false }
+				data: {
+					title: 'Others',
+					breadcrumb: 'OTHERS',
+					preload: false,
+					delay: true
+				}
 			},
 			{
 				path: 'home',
 				loadChildren: './feature/+home/home.module#HomeModule',
-				data: { title: 'Home', breadcrumb: 'HOME', reuse: true }
+				data: {
+					title: 'Home',
+					breadcrumb: 'HOME',
+					reuse: true,
+					preload: true,
+					delay: false
+				}
 			},
 			{
 				path: 'vandashboard',
@@ -43,13 +54,19 @@ export const rootRouterConfig: Routes = [
 					title: 'Vans Dashboard',
 					breadcrumb: 'Vans Dashboard',
 					preload: false,
-					reuse: true
+					reuse: true,
+					delay: false
 				}
 			},
 			{
 				path: 'sessions',
 				loadChildren: './feature/+sessions/sessions.module#SessionsModule',
-				data: { title: 'Session', breadcrumb: 'Sessions', preload: false }
+				data: {
+					title: 'Session',
+					breadcrumb: 'Sessions',
+					preload: false,
+					delay: true
+				}
 			}
 		]
 	},
