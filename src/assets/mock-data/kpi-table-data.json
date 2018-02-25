@@ -1,0 +1,232 @@
+{
+  "kpiInfo": [
+    {
+      "kpi": "Total Sales",
+      "mtd": "34",
+      "mom": "+1.1%",
+      "ytd": "149",
+      "yoy": "+23.3%",
+      "ytd_obj": "29",
+      "last_six_month_names": [
+        "Apr", "Mar", "Feb", "Jan", "Dec", "Nov"
+      ],
+      "actl_ytd_last_6_months": [
+        149, 123, 145, 99, 151, 134
+      ],
+      "obj_ytd_last_6_months": [
+        125, 125, 125, 135, 135, 135
+      ],
+      "bubble_chart_data": [
+        {
+          "x": 149,
+          "y": 152,
+          "z": 6.1,
+          "code": "05101",
+          "name": "Mercedes Benz of Manhattans",
+          "color": "#BF0B23"
+        },
+        {
+          "x": 122,
+          "y": 112,
+          "z": 6.2,
+          "code": "01120",
+          "name": "RML HUNTSVILLE AL AUTOMOTIVE, LLC"
+        },
+        {
+          "x": 204,
+          "y": 250,
+          "z": 7.1,
+          "code": "01127",
+          "name": "BIJ MOTORS AL, LLC"
+        },
+        {
+          "x": 88,
+          "y": 99,
+          "z": 5.2,
+          "code": "01129",
+          "name": "SMITH CHEVROLET CADILLAC CO."
+        },
+        {
+          "x": 132,
+          "y": 122,
+          "z": 5.5,
+          "code": "01303",
+          "name": "JACK INGRAM MOTORS, INC."
+        },
+        {
+          "x": 200,
+          "y": 185,
+          "z": 6.5,
+          "code": "02107",
+          "name": "KENDALL NORTH LLC"
+        },
+        {
+          "x": 234,
+          "y": 250,
+          "z": 8.2,
+          "code": "03102",
+          "name": "SIGMA MOTORS INC."
+        },
+        {
+          "x": 123,
+          "y": 150,
+          "z": 6.1,
+          "code": "03115",
+          "name": "MARTIN AUTOMOTIVE, INC."
+        }
+      ]
+    },
+    {
+      "kpi": "Retail Sales",
+      "mtd": "25",
+      "mom": "+1.2%",
+      "ytd": "95",
+      "yoy": "-1.2%",
+      "ytd_obj": "21",
+      "last_six_month_names": [
+        "Apr", "Mar", "Feb", "Jan", "Dec", "Nov"
+      ],
+      "actl_ytd_last_6_months": [
+        85, 78, 91, 63, 103, 101
+      ],
+      "obj_ytd_last_6_months": [
+        75, 75, 75, 80, 80, 80
+      ],
+      "bubble_chart_data": [
+        {
+          "x": 149,
+          "y": 152,
+          "z": 6.1,
+          "code": "05101",
+          "name": "Mercedes Benz of Manhattan"
+        },
+        {
+          "x": 122,
+          "y": 112,
+          "z": 6.2,
+          "code": "01120",
+          "name": "RML HUNTSVILLE AL AUTOMOTIVE, LLC"
+        },
+        {
+          "x": 234,
+          "y": 250,
+          "z": 7.1,
+          "code": "01127",
+          "name": "BIJ MOTORS AL, LLC"
+        }
+      ]
+    },
+    {
+      "kpi": "Fleet Sales",
+      "mtd": "9",
+      "mom": "-1.2%",
+      "ytd": "54",
+      "yoy": "+1.2%",
+      "ytd_obj": "8",
+      "last_six_month_names": [
+        "Apr", "Mar", "Feb", "Jan", "Dec", "Nov"
+      ],
+      "actl_ytd_last_6_months": [
+        64, 45, 54, 36, 48, 33
+      ],
+      "obj_ytd_last_6_months": [
+        60, 60, 60, 55, 55, 55
+      ],
+      "bubble_chart_data": [
+        {
+          "x": 149,
+          "y": 152,
+          "z": 6.1,
+          "code": "05101",
+          "name": "Mercedes Benz of Manhattan"
+        },
+        {
+          "x": 122,
+          "y": 112,
+          "z": 3.2,
+          "code": "01120",
+          "name": "RML HUNTSVILLE AL AUTOMOTIVE, LLC"
+        },
+        {
+          "x": 234,
+          "y": 250,
+          "z": 7.1,
+          "code": "01127",
+          "name": "BIJ MOTORS AL, LLC"
+        }
+      ]
+    },
+    {
+      "kpi": "CPPP",
+      "mtd": "$5,835",
+      "mom": "+1.2%",
+      "ytd": "$299,886",
+      "yoy": "-1.2%",
+      "ytd_obj": "$129,625",
+      "last_six_month_names": [
+        "Apr", "Mar", "Feb", "Jan", "Dec", "Nov"
+      ],
+      "actl_ytd_last_6_months": [
+        299886, 225999, 223123, 245678, 254098, 213567
+      ],
+      "obj_ytd_last_6_months": [
+        280000, 220000, 234000, 215000, 256000, 212000
+      ],
+      "bubble_chart_data": [
+        {
+          "x": 149,
+          "y": 152,
+          "z": 6.1,
+          "code": "05101",
+          "name": "Mercedes Benz of Manhattan"
+        },
+        {
+          "x": 122,
+          "y": 112,
+          "z": 3.2,
+          "code": "01120",
+          "name": "RML HUNTSVILLE AL AUTOMOTIVE, LLC"
+        },
+        {
+          "x": 234,
+          "y": 250,
+          "z": 7.1,
+          "code": "01127",
+          "name": "BIJ MOTORS AL, LLC"
+        }
+      ]
+    },
+    {
+      "kpi": "Sales Exp Score",
+      "mtd": "981",
+      "mom": "+1.2%",
+      "ytd": "975",
+      "yoy": "-1.2%",
+      "ytd_obj": "-",
+      "last_six_month_names": [
+        "Apr", "Mar", "Feb", "Jan", "Dec", "Nov"
+      ],
+      "actl_ytd_last_6_months": [
+        983, 981, 965, 981, 943, 921
+      ],
+      "obj_ytd_last_6_months": [null, null, null, null, null, null],
+      "bubble_chart_data": []
+    },
+    {
+      "kpi": "Service Exp Score",
+      "mtd": "978",
+      "mom": "-1.2%",
+      "ytd": "981",
+      "yoy": "+1.2%",
+      "ytd_obj": "-",
+      "last_six_month_names": [
+        "Apr", "Mar", "Feb", "Jan", "Dec", "Nov"
+      ],
+      "actl_ytd_last_6_months": [
+        971, 973, 977, 956, 971, 945
+      ],
+      "obj_ytd_last_6_months": [null, null, null, null, null, null],
+      "bubble_chart_data": []
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<div class="sidebar-panel">
+  <div id="scroll-area" class="navigation-hold" fxLayout="column">
+    <!-- App Logo -->
+    <div class="branding default-bg">
+      <img src="assets/images/MB-std_horiz.png" alt="" class="app-logo">
+      <h2 class="app-logo-text text-muted" matTooltip="Corporate Reporting System (v2)">CRS 2.0</h2>
+    </div>
+
+    <!-- Sidebar user -->
+    <div class="app-user">
+      <div class="app-user-photo">
+        <img src="assets/images/707962.JPG" alt="">
+      </div>
+      <span class="app-user-name mb-05">
+        <mat-icon class="icon-xs text-muted">lock</mat-icon>
+        Rajesh Bhanushali
+      </span>
+      <!-- Small buttons -->
+      <div class="app-user-controls">
+        <button
+          class="text-muted"
+          mat-icon-button
+          mat-xs-button
+          matTooltip="Home"
+          routerLink="/home">
+          <mat-icon>home</mat-icon>
+        </button>
+        <button
+          class="text-muted"
+          mat-icon-button
+          mat-xs-button
+          [matMenuTriggerFor]="appUserMenu">
+          <mat-icon>settings</mat-icon>
+        </button>
+        <button
+          class="text-muted"
+          mat-icon-button
+          mat-xs-button
+          matTooltip="Sign Out"
+          routerLink="/app-sessions/signin">
+          <mat-icon>exit_to_app</mat-icon>
+        </button>
+        <mat-menu #appUserMenu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+          <button mat-menu-item routerLink="/app-sessions/signin">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Sign out</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+    <!-- Navigation -->
+    <app-sidenav [items]="menuItems" [hasIconMenu]="hasIconTypeMenuItem" [iconMenuTitle]="iconTypeMenuTitle"></app-sidenav>
+  </div>
+</div>

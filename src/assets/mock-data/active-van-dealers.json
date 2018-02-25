@@ -1,0 +1,317 @@
+[
+    {
+      "dealerName": "DAUPHIN MOTORS OF MOBILE, LLC",
+      "dealerCode": "01117",
+      "regionName": "Northeast",
+      "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "RML HUNTSVILLE AL AUTOMOTIVE, LLC",
+    "dealerCode": "01120",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "BIJ MOTORS AL, LLC",
+    "dealerCode": "01127",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "SMITH CHEVROLET CADILLAC CO.",
+    "dealerCode": "01129",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "JACK INGRAM MOTORS, INC.",
+    "dealerCode": "01303",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "MIKE SCHMITZ AUTOMOTIVE GROUP, INC.",
+    "dealerCode": "01330",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "KENDALL NORTH LLC",
+    "dealerCode": "02107",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "SIGMA MOTORS INC.",
+    "dealerCode": "03102",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "CHAPMAN MOTORCARS OF TUCSON, LLC ",
+    "dealerCode": "03106",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "PEORIA MOTOR COMPANY, LLC",
+    "dealerCode": "03108",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "MARTIN AUTOMOTIVE, INC.",
+    "dealerCode": "03115",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+
+    },
+    {
+    "dealerName": "CAPA, LLC",
+    "dealerCode": "03118",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "PAG NORTH SCOTTSDALE M1, LLC ",
+    "dealerCode": "03123",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "PHOENIX MOTOR COMPANY",
+    "dealerCode": "03703",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "SILVERSTAR AUTOMOTIVE, INC.",
+    "dealerCode": "04100",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "RIVERSIDE MOTORS, INC.",
+    "dealerCode": "04507",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "FLETCHER JONES MOTOR CARS, INC.",
+    "dealerCode": "05101",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "KEYES EUROPEAN, LLC",
+    "dealerCode": "05102",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "GRANT BISHOP MOTORS, INC.",
+    "dealerCode": "05103",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "SMOTHERS AND WHITE, INC.",
+    "dealerCode": "05106",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "LONG BEACH EUROCARS, LLC",
+    "dealerCode": "05119",
+    "regionName": "Northeast",
+    "dealerDim": "2"
+    },
+    {
+    "dealerName": "PMB MOTORCARS, LLC",
+    "dealerCode": "05127",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "VON HOUSENS MOTORS, INC.",
+    "dealerCode": "05133",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "GEORGE GRINZEWITSCH, JR., INC.",
+    "dealerCode": "05138",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "SB AUTOMOTIVE, LP",
+    "dealerCode": "05144",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "MILLER-DM, INC.",
+    "dealerCode": "05146",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "SONIC SANTA MONICA M, INC.",
+    "dealerCode": "05154",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "FREMONT M, LLC",
+    "dealerCode": "05157",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "SONIC WALNUT CREEK M, INC.",
+    "dealerCode": "05158",
+    "regionName": "Northeast",
+    "dealerDim": "2"
+    },
+    {
+    "dealerName": "SONIC CALABASAS M, INC. ",
+    "dealerCode": "05179",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "GPI CA-DMII, INC ",
+    "dealerCode": "05181",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "OXNARD EUROPEAN MOTORS, LLC",
+    "dealerCode": "05188",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "VON HOUSENS SACRAMENTO, INC.",
+    "dealerCode": "05189",
+    "regionName": "Northeast",
+    "dealerDim": "2"
+    },
+    {
+    "dealerName": "FOOTHILL RANCH IMPORTS, LLC",
+    "dealerCode": "05191",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "FRMB, INC.",
+    "dealerCode": "05215",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "PRICE-SIMMS FAIRFIELD, LLC",
+    "dealerCode": "05227",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "ALFANO MOTORCARS, INC.",
+    "dealerCode": "05231",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "JONES ONTARIO ACQUISITION, LLC",
+    "dealerCode": "05235",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "PR1 AUTOMOTIVE, LLC",
+    "dealerCode": "05253",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    },
+    {
+    "dealerName": "JONES BLUMENTHAL TEMECULA, LLC",
+    "dealerCode": "05256",
+    "regionName": "Northeast",
+    "dealerDim": "2",
+      "areaName": "A",
+      "marketName": "01"
+    }
+]

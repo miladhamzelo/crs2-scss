@@ -1,0 +1,17 @@
+<p-dataTable [value]="kpiInfo" [responsive]="true" [stacked]="stacked">
+  <p-header>Key Performance Indicators</p-header>
+  <p-column field="kpi" header="KPI" [style]="{'width': '175px'}"></p-column>
+  <p-column field="mtd" header="MTD"></p-column>
+  <p-column field="mom" header="MoM">
+    <ng-template let-col let-kpiinfo="rowData" pTemplate="body">
+      <span [style.color]="kpiinfo[col.field].indexOf('+') >= 0 ? 'green' : 'red'">{{kpiinfo[col.field]}}</span>
+    </ng-template>
+  </p-column>
+  <p-column field="ytd" header="YTD"></p-column>
+  <p-column field="yoy" header="YoY">
+    <ng-template let-col let-kpiinfo="rowData" pTemplate="body">
+      <span [style.color]="kpiinfo[col.field].indexOf('+') >= 0 ? 'green' : 'red'">{{kpiinfo[col.field]}}</span>
+    </ng-template>
+  </p-column>
+  <p-column field="ytd_obj" header="YTD Obj"></p-column>
+</p-dataTable>

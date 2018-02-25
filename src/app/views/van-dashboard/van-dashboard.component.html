@@ -1,0 +1,149 @@
+<spinner
+        [backgroundColor]="'#02245D'"
+        [spinner]="spinkit.skThreeBounce"
+        [debounceDelay]="100"
+        [filteredUrlPatterns]="['(getLoggedInUserId)']">
+</spinner>
+<div class="vdashboard-container animated fadeIn">
+  <div class="toolbar-div">
+    <div class="toolbar-item-div">Vans Dashboard</div>
+    <div class="toolbar-item-div">{{dashboardHeader}}</div>
+    <div class="toolbar-item-div"><span class="fa fa-bus" style="cursor: pointer"></span></div>
+  </div>
+  <mat-expansion-panel expanded="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Filter&nbsp;<mat-icon>filter_list</mat-icon>
+      </mat-panel-title>
+      <mat-panel-description>
+        Click to pick a Dealer, Month and Year
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <form [formGroup]="basicForm" #formCtrl="ngForm">
+      <div class="filter-div">
+        <div class="filter-item-div">
+          <mat-form-field>
+            <mat-select placeholder="Month and Year" name="mthYr" [formControl]="mthYrControl"
+                        [(ngModel)]="selectedMonthAndYear">
+              <mat-option *ngFor="let monthyear of monthYearInfo" [value]="monthyear">
+                {{ monthyear.monthYearDesc }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="filter-item-div">
+          <mat-form-field style="width: 400px">
+            <input #dealer matInput placeholder="Dealer" aria-label="State" [matAutocomplete]="auto"
+                   [(ngModel)]="selectedDealerInfo" [formControl]="dealerCtrl" required (click)="dealer.select()">
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+              <mat-option *ngFor="let dealer of filteredDealers | async" [value]="dealer">
+                <span>{{ dealer.dealerName }}</span> |
+                <small>Code: {{dealer.dealerCode}}</small>
+              </mat-option>
+            </mat-autocomplete>
+            <mat-error *ngIf="dealerCtrl.hasError('required')">Please pick a Dealer</mat-error>
+            <mat-hint>*required</mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="filter-item-div">
+          <button
+                  type="submit"
+                  mat-raised-button
+                  color="primary"
+                  class="mb-1"
+                  (click)="getKpiInformation()"
+                  [disabled]="!formCtrl.form.valid">Submit</button>
+          </div>
+      </div>
+    </form>
+  </mat-expansion-panel>
+  <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex="100" fxFlex.gt-xs="55" style="padding-top: 5px">
+      <mat-card class="default mat-elevation-z8" style="height: 330px; overflow-y: auto">
+        <mat-card-content class="p-0 m-0">
+          <mat-tab-group (selectedTabChange)="tabChanged($event)">
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <mat-icon>view_list</mat-icon>&nbsp;Tabular
+              </ng-template>
+              <app-kpi-table [kpiInfo]="kpiInfo"></app-kpi-table>
+            </mat-tab>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <mat-icon>poll</mat-icon>&nbsp;Visual
+              </ng-template>
+              <form [formGroup]="basicForm">
+                <div class="filter-div">
+                  <div class="filter-item-div">
+                    <mat-form-field>
+                      <mat-select placeholder="- Last 6 months" name="kpi" (change)="onChange($event)">
+                        <mat-option *ngFor="let kpi of kpiInfo" [value]="kpi.kpi">
+                          {{ kpi.kpi }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </form>
+              <chart [options]="barChartOptions" (load)="saveBarChartInstance($event.context)" class="bar-chart"></chart>
+            </mat-tab>
+          </mat-tab-group>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div fxFlex="100" fxFlex.gt-xs="45" style="padding-top: 5px; padding-left: 0">
+      <mat-card class="default mat-elevation-z8"  style="height: 330px; overflow-y: auto">
+        <mat-card-content class="p-0 m-0">
+          <chart [options]="donutChartOptions" (load)="saveDonutChartInstance($event.context)"></chart>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutWrap="wrap">
+    <div fxFlex="100" fxFlex.gt-xs="100">
+      <mat-card class="default mat-elevation-z8">
+        <mat-card-content class="p-0 m-0">
+          <form [formGroup]="basicForm">
+            <div class="filter-div">
+              <!--<div class="filter-item-div">
+                <mat-form-field>
+                  <mat-select placeholder="Region" name="region">
+                    <mat-option *ngFor="let region of regions" [value]="region.value">
+                      {{ region.viewValue }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>-->
+              <div class="filter-item-div">
+                <mat-form-field>
+                  <mat-select placeholder="KPI (YTD)" name="kpi" (change)="bottomKpiOnChange($event)" [value]="selectedKpi">
+                    <mat-option *ngFor="let kpi of kpiInfo | slice:0:4" [value]="kpi.kpi">
+                      {{ kpi.kpi }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <!--<div class="filter-item-div">
+                <mat-form-field>
+                  <mat-select placeholder="Chart Type" name="chartType">
+                    <mat-option *ngFor="let chartType of chartTypes" [value]="chartType.value">
+                      {{ chartType.viewValue }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="filter-item-div">
+                <button
+                        mat-raised-button
+                        color="primary"
+                        class="mb-1"
+                        [routerLink]="['/dashboard']">Go</button>
+              </div>-->
+            </div>
+          </form>
+          <chart [options]="bubbleChartOptions" (load)="saveBubbleChartInstance($event.context)"></chart>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

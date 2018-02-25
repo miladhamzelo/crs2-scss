@@ -1,0 +1,46 @@
+<div fxLayout="row" fxLayoutWrap="wrap">
+  <div fxFlex="100" fxFlex.gt-xs="50">
+    <mat-card class="p-0">
+      <!--<mat-card-title style="background-color: slategrey">
+        <div class="card-title-text text-center" style="color: white">Highchart</div>
+        <mat-divider></mat-divider>
+      </mat-card-title>-->
+      <mat-card-content class="p-0 m-0">
+        <chart [options]="resChartOptions" (load)="saveResChartInstance($event.context)"></chart>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="100" fxFlex.gt-xs="50">
+    <mat-card class="p-0">
+      <!--<mat-card-title style="background-color: slategrey">
+        <div class="card-title-text text-center" style="color: white">Combination</div>
+        <mat-divider></mat-divider>
+      </mat-card-title>-->
+      <mat-card-content class="p-0 m-0">
+        <chart [options]="bubbleChartOptions" (load)="saveBubbleChartInstance($event.context)"></chart>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="100" fxFlex.gt-xs="50">
+    <mat-card class="p-0">
+      <!--<mat-card-title style="background-color: slategrey">
+        <div class="card-title-text text-center" style="color: white">Combination</div>
+        <mat-divider></mat-divider>
+      </mat-card-title>-->
+      <mat-card-content class="p-0 m-0">
+        <chart [options]="threeDimOptions" (load)="savethreeDimChartInstance($event.context)"></chart>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="100" fxFlex.gt-xs="50">
+    <mat-card class="p-0">
+      <!--<mat-card-title style="background-color: slategrey">
+        <div class="card-title-text text-center" style="color: white">Combination</div>
+        <mat-divider></mat-divider>
+      </mat-card-title>-->
+      <mat-card-content class="p-0 m-0">
+        <chart [options]="cmbChartOptions" (load)="saveCmbChartInstance($event.context)"></chart>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
