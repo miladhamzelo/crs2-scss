@@ -15,7 +15,7 @@ export const rootRouterConfig: Routes = [
 		children: [
 			{
 				path: 'app-sessions',
-				loadChildren: './views/sessions/sessions.module#SessionsModule',
+				loadChildren: './features/+sessions/sessions.module#SessionsModule',
 				data: { title: 'Session', preload: false }
 			}
 		]
@@ -27,18 +27,18 @@ export const rootRouterConfig: Routes = [
 		children: [
 			{
 				path: 'others',
-				loadChildren: './views/others/others.module#OthersModule',
+				loadChildren: './features/+others/others.module#OthersModule',
 				data: { title: 'Others', breadcrumb: 'OTHERS', preload: false }
 			},
 			{
 				path: 'home',
-				loadChildren: './views/home/home.module#HomeModule',
+				loadChildren: './features/+home/home.module#HomeModule',
 				data: { title: 'Home', breadcrumb: 'HOME', reuse: true }
 			},
 			{
 				path: 'vandashboard',
 				loadChildren:
-					'./views/van-dashboard/van-dashboard.module#VanDashboardModule',
+					'./features/+van-dashboard/van-dashboard.module#VanDashboardModule',
 				data: {
 					title: 'Vans Dashboard',
 					breadcrumb: 'Vans Dashboard',
@@ -48,7 +48,7 @@ export const rootRouterConfig: Routes = [
 			},
 			{
 				path: 'sessions',
-				loadChildren: './views/sessions/sessions.module#SessionsModule',
+				loadChildren: './features/+sessions/sessions.module#SessionsModule',
 				data: { title: 'Session', breadcrumb: 'Sessions', preload: false }
 			}
 		]
