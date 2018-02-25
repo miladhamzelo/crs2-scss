@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { HomeRoutes } from './home.routing';
 import { DragulaModule } from 'ng2-dragula';
-import { CalloutBox1Component } from './callout-box-1/callout-box-1.component';
+import { SmallWidgetComponent } from './small-widget/small-widget.component';
 import { MaterialModule } from '../../shared/material/material.module';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { MaterialModule } from '../../shared/material/material.module';
 		DragulaModule,
 		RouterModule.forChild(HomeRoutes)
 	],
-	declarations: [HomeComponent, CalloutBox1Component],
+	declarations: [HomeComponent, SmallWidgetComponent],
 	exports: []
 })
 export class HomeModule {}

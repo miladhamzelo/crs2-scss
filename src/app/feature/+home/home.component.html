@@ -1,13 +1,13 @@
 <div class="animated fadeIn" fxLayout="row" fxLayoutWrap="wrap" [dragula]='"bag-one"'>
-  <app-callout-box-1 fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50"
-                     *ngFor="let calloutonebox of callOutOneBoxes"
-                     [title]="calloutonebox.title"
-                     [subTitle]="calloutonebox.subTitle"
-                     [chipColor]="calloutonebox.chipColor"
-                     [chipIcon]="calloutonebox.chipIcon"
-                     [chipText]="calloutonebox.chipText"
-                     [valueText]="calloutonebox.valueText">
-  </app-callout-box-1>
+  <app-small-widget fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50"
+                    *ngFor="let calloutonebox of callOutOneBoxes"
+                    [title]="calloutonebox.title"
+                    [subTitle]="calloutonebox.subTitle"
+                    [chipColor]="calloutonebox.chipColor"
+                    [chipIcon]="calloutonebox.chipIcon"
+                    [chipText]="calloutonebox.chipText"
+                    [valueText]="calloutonebox.valueText">
+  </app-small-widget>
 </div>
 <section class="home-section" style="padding: 1px">
     <div class="container animated fadeIn">

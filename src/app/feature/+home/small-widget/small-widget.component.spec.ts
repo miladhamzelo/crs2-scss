@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CalloutBox1Component } from './callout-box-1.component';
+import { SmallWidgetComponent } from './small-widget.component';
 
-describe('CalloutBox1Component', () => {
-  let component: CalloutBox1Component;
-  let fixture: ComponentFixture<CalloutBox1Component>;
+describe('SmallWidgetComponent', () => {
+  let component: SmallWidgetComponent;
+  let fixture: ComponentFixture<SmallWidgetComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CalloutBox1Component ]
+      declarations: [ SmallWidgetComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CalloutBox1Component);
+    fixture = TestBed.createComponent(SmallWidgetComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
