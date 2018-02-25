@@ -2,6 +2,7 @@ import { Component, OnInit, EventEmitter, Input, Output, Renderer2 } from '@angu
 import { ThemeService } from '../../services/theme.service';
 import { LayoutService } from '../../services/layout.service';
 import { TranslateService } from 'ng2-translate/ng2-translate';
+import {AppResizeService} from '../../services/app-resize.service';
 
 @Component({
   selector: 'app-header-side',
@@ -23,7 +24,8 @@ export class HeaderSideComponent implements OnInit {
     private themeService: ThemeService,
     private layout: LayoutService,
     public translate: TranslateService,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private resizeService: AppResizeService
   ) {}
   ngOnInit() {
     this.egretThemes = this.themeService.egretThemes;
@@ -39,6 +41,7 @@ export class HeaderSideComponent implements OnInit {
     this.notificPanel.toggle();
   }
   toggleSidenav() {
+    this.resizeService.appResized();
     if(this.layoutConf.sidebarStyle === 'closed') {
       return this.layout.publishLayoutChange({
         sidebarStyle: 'full'
@@ -46,10 +49,11 @@ export class HeaderSideComponent implements OnInit {
     }
     this.layout.publishLayoutChange({
       sidebarStyle: 'closed'
-    })
+    });
   }
 
   toggleCollapse() {
+    this.resizeService.appResized();
     // compact --> full
     if(this.layoutConf.sidebarStyle === 'compact') {
       return this.layout.publishLayoutChange({
@@ -60,7 +64,6 @@ export class HeaderSideComponent implements OnInit {
     // * --> compact
     this.layout.publishLayoutChange({
       sidebarStyle: 'compact'
-    }, {transitionClass: true})
-
+    }, {transitionClass: true});
   }
 }
