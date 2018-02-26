@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'app-callout-box-1',
-	templateUrl: './callout-box-1.component.html',
-	styleUrls: ['./callout-box-1.component.scss']
+	selector: 'app-small-widget',
+	templateUrl: './small-widget.component.html',
+	styleUrls: ['./small-widget.component.scss']
 })
-export class CalloutBox1Component implements OnInit {
+export class SmallWidgetComponent implements OnInit {
 	@Input() title: string;
 	@Input() subTitle: string;
 	@Input() chipText: string;
