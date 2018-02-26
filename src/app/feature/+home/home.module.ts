@@ -7,6 +7,7 @@ import { HomeRoutes } from './home.routing';
 import { DragulaModule } from 'ng2-dragula';
 import { SmallWidgetComponent } from './small-widget/small-widget.component';
 import { MaterialModule } from '../../shared/material/material.module';
+import { MediumWidgetComponent } from './medium-widget/medium-widget.component';
 
 @NgModule({
 	imports: [
@@ -15,7 +16,7 @@ import { MaterialModule } from '../../shared/material/material.module';
 		DragulaModule,
 		RouterModule.forChild(HomeRoutes)
 	],
-	declarations: [HomeComponent, SmallWidgetComponent],
+	declarations: [HomeComponent, SmallWidgetComponent, MediumWidgetComponent],
 	exports: []
 })
 export class HomeModule {}

@@ -1,0 +1,115 @@
+<div fxLayout="row" fxLayoutWrap="wrap" [dragula]='"bag-two"'>
+  <div fxFlex="100" fxFlex.gt-xs="33.33">
+    <mat-card [ngClass]="box5HighlightClass"
+              (mouseover)="changeStyle_5($event)" (mouseout)="changeStyle_5($event)"
+              (click)="selfServiceOnClick()">
+      <mat-card-title class="m-0"  [style.background-color]="box5Color">
+        <div class="card-title-text text-center text-white">Self Service</div>
+        <mat-divider></mat-divider>
+      </mat-card-title>
+      <mat-card-content class="dashboard-mat-card-content">
+        <div class="text-center">
+          <br><br><br>
+          <button class="card-control dashboard-card-button">
+            <!--<span class="fa fa-magic fa-4x" [ngClass]="icon5ColorClass" style="cursor: pointer"></span>-->
+            <i class="material-icons md-48" [ngClass]="icon5ColorClass" style="cursor: pointer">photo_filter</i>
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="100" fxFlex.gt-xs="33.33">
+    <mat-card [ngClass]="box1HighlightClass"
+              (mouseover)="changeStyle_1($event)" (mouseout)="changeStyle_1($event)"
+              matTooltip="Click to open Dealer Performance Summary dashboard" [matTooltipPosition]="tooltipPositionAbove"
+              (click)="dpsOnClick()">
+      <mat-card-title class="m-0" [style.background-color]="box1Color">
+        <div class="card-title-text text-center text-white">DPS</div>
+        <mat-divider></mat-divider>
+      </mat-card-title>
+      <mat-card-content class="dashboard-mat-card-content">
+        <div class="text-center">
+          <br><br><br>
+          <button class="card-control dashboard-card-button">
+            <span class="fa fa-tachometer fa-4x" [ngClass]="icon1ColorClass" style="cursor: pointer"></span>
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="100" fxFlex.gt-xs="33.33">
+    <mat-card [ngClass]="box4HighlightClass"
+              (mouseover)="changeStyle_4($event)" (mouseout)="changeStyle_4($event)"
+              (click)="vanDashboardOnClick()">
+      <mat-card-title class="m-0"  [style.background-color]="box4Color">
+        <div class="card-title-text text-center text-white">Vans Dashboard</div>
+        <mat-divider></mat-divider>
+      </mat-card-title>
+      <mat-card-content class="dashboard-mat-card-content">
+        <div class="text-center">
+          <br><br><br>
+          <button class="card-control dashboard-card-button">
+            <span class="fa fa-bus fa-4x" [ngClass]="icon4ColorClass" style="cursor: pointer"></span>
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div fxLayout="row" fxLayoutWrap="wrap">
+  <div fxFlex="100" fxFlex.gt-xs="33.33">
+    <mat-card [ngClass]="box2HighlightClass"
+              (mouseover)="changeStyle_2($event)" (mouseout)="changeStyle_2($event)"
+              matTooltip="Click to open Parts Assiatance Center report" [matTooltipPosition]="tooltipPositionAbove"
+              (click)="pacOnClick()">
+      <mat-card-title class="m-0" [style.background-color]="box2Color">
+        <div class="card-title-text text-center text-white">PAC</div>
+        <mat-divider></mat-divider>
+      </mat-card-title>
+      <mat-card-content class="dashboard-mat-card-content">
+        <div class="text-center">
+          <br><br><br>
+          <button class="card-control dashboard-card-button">
+            <span class="fa fa-wrench fa-4x" [ngClass]="icon2ColorClass" style="cursor: pointer"></span>
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="100" fxFlex.gt-xs="33.33">
+    <mat-card [ngClass]="box3HighlightClass"
+              (mouseover)="changeStyle_3($event)" (mouseout)="changeStyle_3($event)"
+              matTooltip="Click to open Laureate application" [matTooltipPosition]="tooltipPositionAbove"
+              (click)="laureateOnClick()">
+      <mat-card-title class="m-0"  [style.background-color]="box3Color">
+        <div class="card-title-text text-center text-white">Laureate</div>
+        <mat-divider></mat-divider>
+      </mat-card-title>
+      <mat-card-content class="dashboard-mat-card-content">
+        <div class="text-center">
+          <br><br><br>
+          <button class="card-control dashboard-card-button">
+            <span class="fa fa-trophy fa-4x" [ngClass]="icon3ColorClass" style="cursor: pointer"></span>
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="100" fxFlex.gt-xs="33.33">
+    <mat-card class="p-0" matTooltip="This space is available" [matTooltipPosition]="tooltipPositionBelow">
+      <mat-card-title class="m-0 dashboard-mat-title-lightslategrey">
+        <div class="card-title-text text-center text-muted-white" style="color: white">Available</div>
+        <mat-divider></mat-divider>
+      </mat-card-title>
+      <mat-card-content class="dashboard-mat-card-content">
+        <div class="text-center">
+          <br><br><br>
+          <button class="card-control dashboard-card-button">
+            <span class="fa fa-check-square-o fa-4x text-lightgray"></span>
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
