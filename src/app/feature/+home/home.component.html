@@ -1,6 +1,6 @@
 <div class="animated fadeIn" fxLayout="row" fxLayoutWrap="wrap" [dragula]='"bag-one"' style="padding-top: 5px">
   <app-small-widget fxFlex="100" fxFlex.gt-sm="25" fxFlex.sm="50"
-                    *ngFor="let calloutonebox of callOutOneBoxes"
+                    *ngFor="let calloutonebox of smallWidgetArray"
                     [title]="calloutonebox.title"
                     [subTitle]="calloutonebox.subTitle"
                     [chipColor]="calloutonebox.chipColor"
@@ -11,6 +11,18 @@
 </div>
 <section class="home-section" style="padding: 1px">
     <div class="container animated fadeIn">
-      <app-medium-widget></app-medium-widget>
+      <div fxLayout="row" fxLayoutWrap="wrap" [dragula]='"bag-two"'>
+        <app-medium-widget fxFlex="100" fxFlex.gt-xs="33.33"
+                          *ngFor="let mediumWidget of mediumWidgetArray"
+                            [title]="mediumWidget.title"
+                            [iconClass]="mediumWidget.iconClass"
+                            [iconName]="mediumWidget.iconName"
+                            [tooltipPosition]="mediumWidget.tooltipPosition"
+                            [tooltipText]="mediumWidget.tooltipText"
+                            [linkTo]="mediumWidget.linko"
+                            [url]="mediumWidget.url"
+                            [externalWindowName]="mediumWidget.externalWindowName">
+        </app-medium-widget>
+      </div>
     </div>
 </section>

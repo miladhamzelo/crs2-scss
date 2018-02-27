@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { WindowRef } from '../../../core/services/window.ref.service';
 import { Router } from '@angular/router';
 
@@ -8,9 +8,16 @@ import { Router } from '@angular/router';
 	styleUrls: ['./medium-widget.component.scss']
 })
 export class MediumWidgetComponent implements OnInit {
+	@Input() title: string;
+	@Input() iconClass: string;
+	@Input() iconName: string;
+	@Input() tooltipPosition: string;
+	@Input() tooltipText: string;
+	@Input() linkTo: string; // internal or external
+	@Input() url: string;
+	@Input() externalWindowName: string;
+
 	nativeWindow: any;
-  tooltipPositionAbove = 'above';
-  tooltipPositionBelow = 'below';
 
 	public constructor(private _windowref: WindowRef, private router: Router) {
 		this.nativeWindow = _windowref.getNativeWindow();
@@ -18,32 +25,13 @@ export class MediumWidgetComponent implements OnInit {
 
 	ngOnInit() {}
 
-	dpsOnClick(): void {
-		this.nativeWindow.open(
-			'http://mbhobgnapp802.americas.bg.corpintra.net:9084/fieldOne',
-			'DPS'
-		);
-	}
-
-	pacOnClick(): void {
-		this.nativeWindow.open(
-			'https://crs2-qa.es.corpintra.net/pac/app/main.html#/dealerCallVolumeReport',
-			'PAC'
-		);
-	}
-
-	laureateOnClick(): void {
-		this.nativeWindow.open(
-			'http://sl-qa.usfdc.corpintra.net/laureate-admin/main/indexFull.html?userType=H&costCenter=00273',
-			'Laureate'
-		);
-	}
-
-	vanDashboardOnClick(): void {
-		this.router.navigateByUrl('vandashboard');
-	}
-
-	selfServiceOnClick(): void {
-		this.router.navigateByUrl('others/c3');
+	widgetOnClick(): void {
+		if (this.linkTo === 'internal') {
+			this.router.navigateByUrl(this.url);
+		} else if (this.linkTo === 'external') {
+			this.nativeWindow.open(this.url, this.externalWindowName);
+		} else {
+			return;
+		}
 	}
 }
