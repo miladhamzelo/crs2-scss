@@ -242,7 +242,7 @@ export class VanDashboardComponent implements OnInit {
 	getMonthYearArray() {
 		let url: string;
 		if (this.fetchMockData) {
-			url = 'assets/mock-data/month-year-data.json';
+			url = 'assets/mock-data/global/month-year-data.json';
 		} else {
 			url = environment.apiCriteriaService + '/years';
 		}
